@@ -3,7 +3,6 @@ package br.edu.infnet.NonoAndarApp.model.domain;
 import br.edu.infnet.NonoAndarApp.model.exceptions.AluguelNegativoOuZeradoException;
 import br.edu.infnet.NonoAndarApp.model.exceptions.AndaresNegativoException;
 import br.edu.infnet.NonoAndarApp.model.exceptions.CondominioNegativoOuZeradoException;
-import br.edu.infnet.NonoAndarApp.model.exceptions.EmpresaConveniadaEmBrancoException;
 import br.edu.infnet.NonoAndarApp.model.exceptions.VagasNegativaException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -99,39 +98,15 @@ public abstract class Imovel {
         return mobiliado;
     }
     
-    public abstract float calcularValorTotalAluguel() throws CondominioNegativoOuZeradoException, VagasNegativaException, AluguelNegativoOuZeradoException, 
-            EmpresaConveniadaEmBrancoException, AndaresNegativoException;
+    public abstract float calcularValorTotalAluguel() throws CondominioNegativoOuZeradoException, VagasNegativaException, 
+            AluguelNegativoOuZeradoException, AndaresNegativoException;
     
-    public String ObterImovel() throws CondominioNegativoOuZeradoException, VagasNegativaException, AluguelNegativoOuZeradoException, 
-            EmpresaConveniadaEmBrancoException, AndaresNegativoException{
+    public String ObterImovel() throws CondominioNegativoOuZeradoException, VagasNegativaException,
+            AluguelNegativoOuZeradoException, AndaresNegativoException{
         
         StringBuilder sb = new StringBuilder();
-        
-        DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm");
 
-        sb.append(this.endereco);
-        sb.append(";");
-        sb.append(this.cidade);
-        sb.append(";");
-        sb.append(this.estado);
-        sb.append(";");
-        sb.append(this.dataAnuncio.format(formato));
-        sb.append(";");
-        sb.append(this.tipoAquisicao);
-        sb.append(";");
-        sb.append(this.quartos);
-        sb.append(";");
-        sb.append(this.banheiros);
-        sb.append(";");
-        sb.append(this.valorVenda);
-        sb.append(";");
-        sb.append(this.valorAluguel);
-        sb.append(";");
-        sb.append(this.metrosQuadrados);
-        sb.append(";");
-        sb.append(this.valorMetroQuadrado);
-        sb.append(";");
-        sb.append(this.mobiliado);
+        sb.append(this.toString());
         sb.append(";");
         sb.append(this.calcularValorTotalAluguel());
         

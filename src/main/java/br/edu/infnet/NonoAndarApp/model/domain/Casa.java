@@ -50,11 +50,11 @@ public class Casa extends Imovel{
             throw new AluguelNegativoOuZeradoException("[Casa] O valor do Aluguel informado está negativo ou zerado!");
         }
         
-        else if (this.andares < 0){
+        if (this.andares < 0){
             throw new AndaresNegativoException("[Casa] O número de andares está negativo!");
         }
         
-        else if (this.andares > 1){
+        if (this.andares > 1){
             
              valorAluguel += 500;
         }

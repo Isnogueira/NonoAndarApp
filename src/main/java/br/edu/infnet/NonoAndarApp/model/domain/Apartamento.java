@@ -64,7 +64,7 @@ public class Apartamento extends Imovel {
             throw new VagasNegativaException("[Apartamento] O número de vagas está negativo!");
         }
         
-        return this.getValorAluguel() + this.valorCondomínio;
+        return this.getValorAluguel() + this.valorCondomínio + this.vagas * 30;
     }
    
     @Override

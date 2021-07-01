@@ -49,21 +49,6 @@ public class Imobiliaria {
         this.gerente = gerente;
     }
     
-    public String obterImobiliaria(){
-        
-        StringBuilder sb = new StringBuilder();
-        
-        sb.append(this.nome);
-        sb.append(";");
-        sb.append(this.endereço);
-        sb.append(";");
-        sb.append(this.telefone);
-        sb.append(";");
-        sb.append(this.gerente);
-        
-        return sb.toString();
-    }
-    
     @Override
     public String toString() {
         

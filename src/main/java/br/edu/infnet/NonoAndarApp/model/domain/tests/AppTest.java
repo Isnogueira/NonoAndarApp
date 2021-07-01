@@ -9,7 +9,6 @@ import br.edu.infnet.NonoAndarApp.model.domain.Imobiliaria;
 import br.edu.infnet.NonoAndarApp.model.exceptions.AluguelNegativoOuZeradoException;
 import br.edu.infnet.NonoAndarApp.model.exceptions.AndaresNegativoException;
 import br.edu.infnet.NonoAndarApp.model.exceptions.CondominioNegativoOuZeradoException;
-import br.edu.infnet.NonoAndarApp.model.exceptions.EmpresaConveniadaEmBrancoException;
 import br.edu.infnet.NonoAndarApp.model.exceptions.VagasNegativaException;
 import java.io.BufferedWriter;
 import java.io.BufferedReader;
@@ -58,7 +57,7 @@ public class AppTest {
                         
                         System.out.println("Imobiliaria: " + imobiliaria);
                         
-                        escrita.write("Imobiliária: " + imobiliaria.obterImobiliaria() + "\r\n");
+                        escrita.write("Imobiliária: " + imobiliaria + "\r\n");
                         
                         break;
                     
@@ -101,8 +100,9 @@ public class AppTest {
                                 Integer.valueOf(campos[6]), Float.valueOf(campos[7]), Float.valueOf(campos[8]), Integer.valueOf(campos[9]), 
                                 Float.valueOf(campos[10]), Boolean.valueOf(campos[11]));
                         
-                        escritorio.setEmpresaConveniada(campos[12]);
+                        escritorio.setCondominio(Float.valueOf(campos[12]));
                         escritorio.setWifiIncluso(Boolean.valueOf(campos[13]));
+                        escritorio.setPortaria24hrs(Boolean.valueOf(campos[14]));
                         
                         System.out.println("    Escritório: " + escritorio);
                         
@@ -121,8 +121,8 @@ public class AppTest {
             leitura.close();
             fileW.close();
             
-        } catch (AluguelNegativoOuZeradoException | CondominioNegativoOuZeradoException | VagasNegativaException | AndaresNegativoException |
-                EmpresaConveniadaEmBrancoException | IOException ex) {
+        } catch (AluguelNegativoOuZeradoException | CondominioNegativoOuZeradoException | VagasNegativaException 
+                | AndaresNegativoException | IOException ex) {
              System.out.println(ex.getMessage());
         
         } finally {

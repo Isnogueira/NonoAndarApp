@@ -6,7 +6,6 @@ import br.edu.infnet.NonoAndarApp.model.domain.Escritorio;
 import br.edu.infnet.NonoAndarApp.model.exceptions.AluguelNegativoOuZeradoException;
 import br.edu.infnet.NonoAndarApp.model.exceptions.AndaresNegativoException;
 import br.edu.infnet.NonoAndarApp.model.exceptions.CondominioNegativoOuZeradoException;
-import br.edu.infnet.NonoAndarApp.model.exceptions.EmpresaConveniadaEmBrancoException;
 import br.edu.infnet.NonoAndarApp.model.exceptions.VagasNegativaException;
 
 
@@ -26,7 +25,7 @@ public class ImovelTest {
             apt1.setPetFriendly(true);
             System.out.println("Apartamento: " + apt1.ObterImovel());
            
-        } catch (AluguelNegativoOuZeradoException | CondominioNegativoOuZeradoException | VagasNegativaException | EmpresaConveniadaEmBrancoException | AndaresNegativoException ex) {
+        } catch (AluguelNegativoOuZeradoException | CondominioNegativoOuZeradoException | VagasNegativaException | AndaresNegativoException ex) {
                     System.out.println(ex.getMessage());
         }
         try {
@@ -36,7 +35,7 @@ public class ImovelTest {
             apt2.setVagas(1);
             apt2.setPetFriendly(true);
             System.out.println("Apartamento: " + apt2.ObterImovel());
-        } catch (AluguelNegativoOuZeradoException | CondominioNegativoOuZeradoException | VagasNegativaException | EmpresaConveniadaEmBrancoException | AndaresNegativoException ex) {
+        } catch (AluguelNegativoOuZeradoException | CondominioNegativoOuZeradoException | VagasNegativaException | AndaresNegativoException ex) {
             System.out.println(ex.getMessage());
         }
             
@@ -48,7 +47,7 @@ public class ImovelTest {
             apt3.setPetFriendly(true);
             System.out.println("Apartamento: " + apt3.ObterImovel());
        
-        } catch (AluguelNegativoOuZeradoException | CondominioNegativoOuZeradoException | VagasNegativaException | EmpresaConveniadaEmBrancoException | AndaresNegativoException ex) {
+        } catch (AluguelNegativoOuZeradoException | CondominioNegativoOuZeradoException | VagasNegativaException | AndaresNegativoException ex) {
             System.out.println(ex.getMessage());
         }
             
@@ -58,7 +57,7 @@ public class ImovelTest {
             casa1.setQuintal(false);
             casa1.setAndares(1);
             System.out.println("Casa: " + casa1.ObterImovel());
-        } catch (AluguelNegativoOuZeradoException | CondominioNegativoOuZeradoException | VagasNegativaException | EmpresaConveniadaEmBrancoException | AndaresNegativoException ex) {
+        } catch (AluguelNegativoOuZeradoException | CondominioNegativoOuZeradoException | VagasNegativaException | AndaresNegativoException ex) {
             System.out.println(ex.getMessage());
         }
             
@@ -68,7 +67,7 @@ public class ImovelTest {
             casa2.setQuintal(false);
             casa2.setAndares(-1);
             System.out.println("Casa: " + casa2.ObterImovel());
-        } catch (AluguelNegativoOuZeradoException | CondominioNegativoOuZeradoException | VagasNegativaException | EmpresaConveniadaEmBrancoException | AndaresNegativoException ex) {
+        } catch (AluguelNegativoOuZeradoException | CondominioNegativoOuZeradoException | VagasNegativaException | AndaresNegativoException ex) {
             System.out.println(ex.getMessage());
         }
             
@@ -78,34 +77,34 @@ public class ImovelTest {
             casa3.setQuintal(false);
             casa3.setAndares(1);
             System.out.println("Casa: " + casa3.ObterImovel());
-        } catch (AluguelNegativoOuZeradoException | CondominioNegativoOuZeradoException | VagasNegativaException | EmpresaConveniadaEmBrancoException | AndaresNegativoException ex) {
+        } catch (AluguelNegativoOuZeradoException | CondominioNegativoOuZeradoException | VagasNegativaException | AndaresNegativoException ex) {
            System.out.println(ex.getMessage());
         }
             
         try {
             Escritorio escrit1 = new Escritorio("Rua Praia de Botafogo 1200/1301", "Rio de Janeiro", "Rio de Janeiro", "Aluguel", 2, 2, 1390000, 2900, 100, 100, true);
-            escrit1.setEmpresaConveniada("Coca cola.SA");
+            escrit1.setCondominio(450);
             escrit1.setWifiIncluso(true);
             System.out.println("Escritório: " + escrit1.ObterImovel());
-        } catch (AluguelNegativoOuZeradoException | CondominioNegativoOuZeradoException | VagasNegativaException | EmpresaConveniadaEmBrancoException | AndaresNegativoException ex) {
+        } catch (AluguelNegativoOuZeradoException | CondominioNegativoOuZeradoException | VagasNegativaException | AndaresNegativoException ex) {
             System.out.println(ex.getMessage());
         }
             
         try {
-            Escritorio escrit2 = new Escritorio("Rua Praia de Botafogo 1200/1301", "Rio de Janeiro", "Rio de Janeiro", "Aluguel", 2, 2, 1390000, 2900, 100, 100, true);
-            escrit2.setEmpresaConveniada(" ");
+            Escritorio escrit2 = new Escritorio("Rua Praia de Botafogo 1200/1301", "Rio de Janeiro", "Rio de Janeiro", "Aluguel", 2, 2, 1390000, 0, 100, 100, true);
+            escrit2.setCondominio(650);
             escrit2.setWifiIncluso(true);
             System.out.println("Escritório: " + escrit2.ObterImovel());
-        } catch (AluguelNegativoOuZeradoException | CondominioNegativoOuZeradoException | VagasNegativaException | EmpresaConveniadaEmBrancoException | AndaresNegativoException ex) {
+        } catch (AluguelNegativoOuZeradoException | CondominioNegativoOuZeradoException | VagasNegativaException | AndaresNegativoException ex) {
             System.out.println(ex.getMessage());
         }
             
         try {
             Escritorio escrit3 = new Escritorio("Rua Praia de Botafogo 1200/1301", "Rio de Janeiro", "Rio de Janeiro", "Aluguel", 2, 2, 1390000, 1230, 100, 100, true);
-            escrit3.setEmpresaConveniada("Coca cola.SA");
+            escrit3.setCondominio(0);
             escrit3.setWifiIncluso(true);
             System.out.println("Escritório: " + escrit3.ObterImovel());
-        } catch (AluguelNegativoOuZeradoException | CondominioNegativoOuZeradoException | VagasNegativaException | EmpresaConveniadaEmBrancoException | AndaresNegativoException ex) {
+        } catch (AluguelNegativoOuZeradoException | CondominioNegativoOuZeradoException | VagasNegativaException | AndaresNegativoException ex) {
             System.out.println(ex.getMessage());
         }
                 
