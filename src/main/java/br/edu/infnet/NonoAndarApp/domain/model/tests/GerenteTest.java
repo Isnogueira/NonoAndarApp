@@ -1,6 +1,6 @@
-package br.edu.infnet.NonoAndarApp.model.domain.tests;
+package br.edu.infnet.NonoAndarApp.domain.model.tests;
 
-import br.edu.infnet.NonoAndarApp.model.domain.Gerente;
+import br.edu.infnet.NonoAndarApp.domain.model.Gerente;
 
 /**
  *

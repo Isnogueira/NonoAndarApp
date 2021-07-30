@@ -1,4 +1,4 @@
-package br.edu.infnet.NonoAndarApp.model.domain;
+package br.edu.infnet.NonoAndarApp.domain.model;
 
 import br.edu.infnet.NonoAndarApp.model.exceptions.AluguelNegativoOuZeradoException;
 import br.edu.infnet.NonoAndarApp.model.exceptions.AndaresNegativoException;
@@ -6,7 +6,6 @@ import br.edu.infnet.NonoAndarApp.model.exceptions.CondominioNegativoOuZeradoExc
 import br.edu.infnet.NonoAndarApp.model.exceptions.VagasNegativaException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-
 
 /**
  *
@@ -107,7 +106,6 @@ public abstract class Imovel {
         StringBuilder sb = new StringBuilder();
 
         sb.append(this.toString());
-        sb.append(";");
         sb.append(this.calcularValorTotalAluguel());
         
         return sb.toString();

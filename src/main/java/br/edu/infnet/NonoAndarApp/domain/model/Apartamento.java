@@ -1,5 +1,6 @@
-package br.edu.infnet.NonoAndarApp.model.domain;
+package br.edu.infnet.NonoAndarApp.domain.model;
 
+import br.edu.infnet.NonoAndarApp.domain.model.Imovel;
 import br.edu.infnet.NonoAndarApp.model.exceptions.CondominioNegativoOuZeradoException;
 import br.edu.infnet.NonoAndarApp.model.exceptions.VagasNegativaException;
 /**
@@ -14,7 +15,17 @@ public class Apartamento extends Imovel {
     private boolean petFriendly;
 
     public Apartamento(String endereco, String cidade, String estado, String tipoAquisicao, int quartos, int banheiros, float valorVenda, float valorAluguel, int metrosQuadrados, float valorMetroQuadrado, boolean mobiliado) {
-        super(endereco, cidade, estado, tipoAquisicao, quartos, banheiros, valorVenda, valorAluguel, metrosQuadrados, valorMetroQuadrado, mobiliado);
+        super(endereco,
+                cidade,
+                estado,
+                tipoAquisicao,
+                quartos,
+                banheiros,
+                valorVenda,
+                valorAluguel,
+                metrosQuadrados,
+                valorMetroQuadrado,
+                mobiliado);
   
     }
     

@@ -1,4 +1,4 @@
-package br.edu.infnet.NonoAndarApp.model.domain;
+package br.edu.infnet.NonoAndarApp.domain.model;
 
 /**
  *

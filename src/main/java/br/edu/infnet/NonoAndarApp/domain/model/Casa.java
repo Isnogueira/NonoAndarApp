@@ -1,12 +1,13 @@
-package br.edu.infnet.NonoAndarApp.model.domain;
+package br.edu.infnet.NonoAndarApp.domain.model;
 
+import br.edu.infnet.NonoAndarApp.domain.model.Imovel;
 import br.edu.infnet.NonoAndarApp.model.exceptions.AluguelNegativoOuZeradoException;
 import br.edu.infnet.NonoAndarApp.model.exceptions.AndaresNegativoException;
 /**
  *
  * @author IngridNogueira
  */
-public class Casa extends Imovel{
+public class Casa extends Imovel {
     
     private boolean garagem;
     private boolean quintal;
@@ -68,7 +69,6 @@ public class Casa extends Imovel{
         StringBuilder sb = new StringBuilder();
         
         sb.append(super.toString());
-        sb.append(";");
         sb.append(this.garagem ? "S" : "N");
         sb.append(";");
         sb.append(this.quintal ? "S" : "N");

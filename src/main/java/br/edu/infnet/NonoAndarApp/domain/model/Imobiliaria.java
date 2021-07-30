@@ -1,4 +1,4 @@
-package br.edu.infnet.NonoAndarApp.model.domain;
+package br.edu.infnet.NonoAndarApp.domain.model;
 
 /**
  *
@@ -45,10 +45,8 @@ public class Imobiliaria {
         return gerente;
     }
 
-    public void setGerente(Gerente gerente) {
-        this.gerente = gerente;
-    }
-    
+    public void setGerente(Gerente gerente) { this.gerente = gerente;}
+
     @Override
     public String toString() {
         

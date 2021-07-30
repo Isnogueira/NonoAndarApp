@@ -1,8 +1,8 @@
-package br.edu.infnet.NonoAndarApp.model.domain.tests;
+package br.edu.infnet.NonoAndarApp.domain.model.tests;
 
-import br.edu.infnet.NonoAndarApp.model.domain.Apartamento;
-import br.edu.infnet.NonoAndarApp.model.domain.Casa;
-import br.edu.infnet.NonoAndarApp.model.domain.Escritorio;
+import br.edu.infnet.NonoAndarApp.domain.model.Apartamento;
+import br.edu.infnet.NonoAndarApp.domain.model.Casa;
+import br.edu.infnet.NonoAndarApp.domain.model.Escritorio;
 import br.edu.infnet.NonoAndarApp.model.exceptions.AluguelNegativoOuZeradoException;
 import br.edu.infnet.NonoAndarApp.model.exceptions.AndaresNegativoException;
 import br.edu.infnet.NonoAndarApp.model.exceptions.CondominioNegativoOuZeradoException;
