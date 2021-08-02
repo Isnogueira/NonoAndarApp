@@ -1,70 +1,45 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="pt-br">
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+         pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
+    <title>Bootstrap Theme Simply Me</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>APP2021 - Cadastro</title>
-    <!--<link rel="stylesheet" href="css/meuestilo.css">-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .bg-1 {
+            background-color: #1e51be;
+            color: #ffffff;
+            text-align: center;
+        }
+        .container-fluid {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+        img{
+            width: 250px;
+            height: 280px;
+            border-radius: 60%;
+        }
+        .bg-2{
+            background-color:rgb(127, 137, 233);
+            color: #ffffff;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-<form action="confirmacao.html" method="get">
-    <div class="container">
-        <h2>Cadastro</h2>
-        <div class="form-group">
-            <label for="nome">Nome:</label>
-            <input type="text" class="form-control" id="nome" placeholder="Entre com o nome" name="nome">
-        </div>
-        <div class="form-group">
-            <label for="email">E-mail:</label>
-            <input type="email" class="form-control" id="email" placeholder="Entre com o email" name="email">
-        </div>
-        <div class="container">
-            <h2>Curso</h2>
-            <form>
-                <label class="radio-inline">
-                    <input type="radio" name="curso" value="G" checked>Graduação
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="curso" value="E">Especialização
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="curso" value="M">Mestrado
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="curso" value="D">Doutorado
-                </label>
-            </form>
-        </div>
-        <div class="container">
-            <h2>Região</h2>
-            <select class="form-control" id="regiao" name="regiao">
-                <option>Nordeste</option>
-                <option>Norte</option>
-                <option>Sudeste</option>
-                <option>Sul</option>
-                <option>Centro-oeste</option>
-            </select>
-        </div>
-        <div class="container">
-            <h2>Disciplina</h2>
-            <form>
-                <div class="checkbox">
-                    <label><input type="checkbox" value="Java" name="disciplina"> Java</label>
-                </div>
-                <div class="checkbox">
-                    <label><input type="checkbox" value="Python" name="disciplina">Python</label>
-                </div>
-                <div class="checkbox disabled">
-                    <label><input type="checkbox" value="JavaScript" name="disciplina">JavaScript</label>
-                </div>
-            </form>
-        </div>
-        <button type="submit" class="btn btn-default">Cadastrar</button>
-    </div>
-</form>
+<div class="container-fluid bg-1">
+    <h3>Quem sou eu?</h3>
+    <img src="post.jpg" alt="eu">
+    <h3>Ingrid Nogueira</h3>
+</div>
+<div class="container-fluid bg-2 text-center">
+    <a href="https://github.com/Isnogueira/NonoAndarApp">Github do projeto |</a>
+    <a href="/imovel">Cadastramento de imoveis</a>
+</div>
 </body>
 </html>
