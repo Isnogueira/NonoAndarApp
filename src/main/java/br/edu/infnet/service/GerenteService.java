@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 ;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class GerenteService {
@@ -18,9 +19,19 @@ public class GerenteService {
        return (List<Gerente>) gerenteRepository.findAll();
     }
 
-    public void Incluir(Gerente gerente){
+    public void incluir(Gerente gerente){
 
        gerenteRepository.save(gerente);
 
+    }
+
+    public void excluir(Integer id){
+
+        gerenteRepository.deleteById(id);
+    }
+
+    public Optional<Gerente> obterPorId(Integer id){
+
+        return gerenteRepository.findById(id);
     }
 }

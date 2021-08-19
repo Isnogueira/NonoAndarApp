@@ -1,6 +1,3 @@
-<%@ page import="br.edu.infnet.domain.model.Gerente"%>
-<%@ page import="java.util.List" %>
-<%@ page import="java.util.ArrayList" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE = html>
@@ -31,15 +28,16 @@
     <head>
     <body>
     <c:import url="/WEB-INF/jsp/menu.jsp"/>
-        <%
-            List<Gerente>gerentes = (List<Gerente>) request.getAttribute("lista");
-            int qtde = gerentes.size();
-       %>
         <div class="container">
-            <hr>
+             <c:if test="${not empty mensagem}">
+                    <div class="alert alert-success alert-dismissible">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <strong>Informação!</strong> ${mensagem}
+                    </div>
+                </c:if>
             <form action="/gerente" method="get">
             <c:if test="${not empty lista}">
-                <h3>Quantidade de gerentes cadastrados: <%=qtde%>
+                <h3>Quantidade de gerentes cadastrados: ${lista.size()}
                     <button type="submit" class="btn btn-default btn-lg" name="tela" value="lista">Incluir</button>
                 </h3>
                 <form>
@@ -47,6 +45,7 @@
                   <table class="table table-striped">
                     <thead>
                       <tr>
+                        <th>ID</th>
                         <th>Nome</th>
                         <th>Email</th>
                         <th>Whatsapp</th>
@@ -54,14 +53,15 @@
                       </tr>
                     </thead>
                     <tbody>
-                        <%for(Gerente g : gerentes) {%>
-                          <tr>
-                            <td><%=g.getNome()%></td>
-                            <td><%=g.getEmail()%></td>
-                            <td><%=g.getTelefone()%></td>
-                            <td><a href="#">Excluir</a></td>
-                          </tr>
-                          <%}%>
+                       <c:forEach var="gerente" items="${lista}" varStatus="id">
+                             <tr>
+                               <td>${gerente.id}</td>
+                               <td>${gerente.nome}</td>
+                               <td>${gerente.email}</td>
+                               <td>${gerente.telefone}</td>
+                               <td><a href="/gerente/${gerente.id}/excluir">Excluir</a></td>
+                             </tr>
+                       </c:forEach>
                     </tbody>
                  </table>
             </c:if>
