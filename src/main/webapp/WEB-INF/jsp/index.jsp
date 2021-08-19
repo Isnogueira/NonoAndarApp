@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-         pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <title>Bootstrap Theme Simply Me</title>
+    <title>Index</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -11,35 +11,45 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
         .bg-1 {
-            background-color: #1e51be;
+           background-image: url("img/background.jpg");
             color: #ffffff;
-            text-align: center;
-        }
-        .container-fluid {
+          }
+          .bg-2 {
+            background-color: #474e5d;
+            color: #ffffff;
+          }
+          .bg-3 {
+            background-color: #ffffff;
+            color: #555555;
+          }
+          .container-fluid {
             padding-top: 70px;
             padding-bottom: 70px;
-        }
-        img{
-            width: 250px;
-            height: 280px;
-            border-radius: 60%;
-        }
-        .bg-2{
-            background-color:rgb(127, 137, 233);
-            color: #ffffff;
-            text-align: center;
-        }
+          }
+            footer {
+                      background-color:rgb(6, 25, 36);
+                      color: rgb(179, 217, 240);
+                      padding: 15px;
+                  }
     </style>
 </head>
 <body>
-<div class="container-fluid bg-1">
-    <h3>Quem sou eu?</h3>
-    <img src="post.jpg" alt="eu">
-    <h3>Ingrid Nogueira</h3>
-</div>
-<div class="container-fluid bg-2 text-center">
-    <a href="https://github.com/Isnogueira/NonoAndarApp">Github do projeto |</a>
-    <a href="/imovel">Cadastramento de imoveis</a>
-</div>
+<div class="container-fluid bg-1 text-center">
+   <h3>Quem sou eu?</h3>
+   <img src="/img/eu.jpeg" class="img-circle" alt="eu" width="350" height="350">
+   <h3>Ingrid Nogueira - Aluna de ADS  Bloco Java </h3>
+ </div>
+ <div class="container-fluid bg-2 text-center">
+   <h3>Sobre o projeto</h3>
+   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+   <a href="/gerente/lista" class="btn btn-default btn-lg">Começar</a>
+ </div>
+ <div class="container-fluid bg-3 text-center">
+   <h3>GitHub</h3>
+       <a href="https://github.com/Isnogueira">https://github.com/Isnogueira</a>
+ </div>
+<footer class="container-fluid text-center">
+       <p>&copy Ingrid Nogueira 2021</p>
+</footer>
 </body>
 </html>
