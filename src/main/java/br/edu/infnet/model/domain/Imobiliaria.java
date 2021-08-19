@@ -1,6 +1,4 @@
-package br.edu.infnet.domain.model;
-
-import br.edu.infnet.domain.model.Gerente;
+package br.edu.infnet.model.domain;
 
 /**
  *

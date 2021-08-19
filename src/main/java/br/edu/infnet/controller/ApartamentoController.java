@@ -1,6 +1,6 @@
-package br.edu.infnet.app;
+package br.edu.infnet.controller;
 
-import br.edu.infnet.domain.model.Apartamento;
+import br.edu.infnet.model.domain.Apartamento;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

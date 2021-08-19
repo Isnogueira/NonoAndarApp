@@ -1,7 +1,7 @@
-package br.edu.infnet.domain.model.tests;
+package br.edu.infnet.model.domain.tests;
 
-import br.edu.infnet.domain.model.Gerente;
-import br.edu.infnet.domain.model.Imobiliaria;
+import br.edu.infnet.model.domain.Gerente;
+import br.edu.infnet.model.domain.Imobiliaria;
 
 /**
  *

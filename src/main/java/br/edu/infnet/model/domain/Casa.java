@@ -1,7 +1,7 @@
-package br.edu.infnet.domain.model;
+package br.edu.infnet.model.domain;
 
-import br.edu.infnet.domain.model.exceptions.AluguelNegativoOuZeradoException;
-import br.edu.infnet.domain.model.exceptions.AndaresNegativoException;
+import br.edu.infnet.model.domain.exceptions.AluguelNegativoOuZeradoException;
+import br.edu.infnet.model.domain.exceptions.AndaresNegativoException;
 
 /**
  *

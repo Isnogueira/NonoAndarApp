@@ -1,11 +1,11 @@
 
-package br.edu.infnet.domain.model.tests;
+package br.edu.infnet.model.domain.tests;
 
 
-import br.edu.infnet.domain.model.exceptions.AluguelNegativoOuZeradoException;
-import br.edu.infnet.domain.model.exceptions.AndaresNegativoException;
-import br.edu.infnet.domain.model.exceptions.VagasNegativaException;
-import br.edu.infnet.domain.model.exceptions.CondominioNegativoOuZeradoException;
+import br.edu.infnet.model.domain.exceptions.AluguelNegativoOuZeradoException;
+import br.edu.infnet.model.domain.exceptions.AndaresNegativoException;
+import br.edu.infnet.model.domain.exceptions.VagasNegativaException;
+import br.edu.infnet.model.domain.exceptions.CondominioNegativoOuZeradoException;
 
 import java.io.BufferedWriter;
 import java.io.BufferedReader;
@@ -16,7 +16,6 @@ import java.io.InputStreamReader;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-import br.edu.infnet.domain.model.*;
 import org.springframework.core.io.ClassPathResource;
 
 /**

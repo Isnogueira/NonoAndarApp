@@ -1,4 +1,4 @@
-package br.edu.infnet.domain.model.exceptions;
+package br.edu.infnet.model.domain.exceptions;
 
 /**
  *

@@ -1,4 +1,4 @@
-package br.edu.infnet.domain.model;
+package br.edu.infnet.model.domain;
 
 import javax.persistence.*;
 

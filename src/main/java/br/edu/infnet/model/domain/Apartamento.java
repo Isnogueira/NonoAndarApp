@@ -1,7 +1,7 @@
-package br.edu.infnet.domain.model;
+package br.edu.infnet.model.domain;
 
-import br.edu.infnet.domain.model.exceptions.VagasNegativaException;
-import br.edu.infnet.domain.model.exceptions.CondominioNegativoOuZeradoException;
+import br.edu.infnet.model.domain.exceptions.VagasNegativaException;
+import br.edu.infnet.model.domain.exceptions.CondominioNegativoOuZeradoException;
 
 public class Apartamento extends Imovel {
     

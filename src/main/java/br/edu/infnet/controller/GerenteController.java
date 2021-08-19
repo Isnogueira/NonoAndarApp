@@ -1,7 +1,7 @@
-package br.edu.infnet.app;
+package br.edu.infnet.controller;
 
-import br.edu.infnet.domain.model.Gerente;
-import br.edu.infnet.service.GerenteService;
+import br.edu.infnet.model.domain.Gerente;
+import br.edu.infnet.model.service.GerenteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
