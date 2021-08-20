@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class ApartamentoController {
-
+/*
     @GetMapping(value = "/apartamento")
     public String tela(){
         return "/apartamento/cadastro";
@@ -26,4 +26,6 @@ public class ApartamentoController {
 
         return "/apartamento/confirmacao";
     }
+
+ */
 }

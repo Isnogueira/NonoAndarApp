@@ -37,12 +37,12 @@
 <div class="container-fluid bg-1 text-center">
    <h3>Quem sou eu?</h3>
    <img src="/img/eu.jpeg" class="img-circle" alt="eu" width="350" height="350">
-   <h3>Ingrid Nogueira - Aluna de ADS  Bloco Java </h3>
+   <h3>${user.nome} - Aluna de ADS  Bloco Java </h3>
  </div>
  <div class="container-fluid bg-2 text-center">
    <h3>Sobre o projeto</h3>
    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-   <a href="/gerente/lista" class="btn btn-default btn-lg">Começar</a>
+   <a href="#" class="btn btn-default btn-lg">Começar</a>
  </div>
  <div class="container-fluid bg-3 text-center">
    <h3>GitHub</h3>

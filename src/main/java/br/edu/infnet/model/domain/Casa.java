@@ -3,10 +3,6 @@ package br.edu.infnet.model.domain;
 import br.edu.infnet.model.domain.exceptions.AluguelNegativoOuZeradoException;
 import br.edu.infnet.model.domain.exceptions.AndaresNegativoException;
 
-/**
- *
- * @author IngridNogueira
- */
 public class Casa extends Imovel {
     
     private boolean garagem;

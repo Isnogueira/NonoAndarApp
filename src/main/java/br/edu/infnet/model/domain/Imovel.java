@@ -8,10 +8,6 @@ import br.edu.infnet.model.domain.exceptions.CondominioNegativoOuZeradoException
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-/**
- *
- * @author IngridNogueira
- */
 public abstract class Imovel {
     
     private String endereco;

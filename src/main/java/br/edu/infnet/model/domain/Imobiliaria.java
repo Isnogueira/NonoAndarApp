@@ -1,9 +1,5 @@
 package br.edu.infnet.model.domain;
 
-/**
- *
- * @author IngridNogueira
- */
 public class Imobiliaria {
     
     private String nome;

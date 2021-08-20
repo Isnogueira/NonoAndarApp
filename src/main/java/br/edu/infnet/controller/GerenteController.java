@@ -14,7 +14,7 @@ import java.util.Optional;
 @Controller
 public class GerenteController {
 
-    @Autowired
+   /* @Autowired
     private GerenteService gerenteService;
 
     @GetMapping(value = "/gerente")
@@ -59,4 +59,6 @@ public class GerenteController {
         return telaLista(model);
 
     }
+
+    */
 }

@@ -11,7 +11,7 @@ import java.util.Optional;
 @Service
 public class GerenteService {
 
-    @Autowired
+  /*  @Autowired
     private GerenteRepository gerenteRepository;
 
     public List<Gerente> obterLista(){
@@ -34,4 +34,6 @@ public class GerenteService {
 
         return gerenteRepository.findById(id);
     }
+
+   */
 }

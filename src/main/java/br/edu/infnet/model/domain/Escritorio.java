@@ -3,10 +3,6 @@ package br.edu.infnet.model.domain;
 import br.edu.infnet.model.domain.exceptions.AluguelNegativoOuZeradoException;
 import br.edu.infnet.model.domain.exceptions.CondominioNegativoOuZeradoException;
 
-/**
- *
- * @author IngridNogueira
- */
 public class Escritorio extends Imovel {
     
     private float condominio;

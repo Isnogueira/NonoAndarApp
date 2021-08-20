@@ -1,14 +1,21 @@
 package br.edu.infnet.controller;
 
-import br.edu.infnet.model.domain.Gerente;
+import br.edu.infnet.model.domain.Usuario;
+import br.edu.infnet.model.service.UsuarioService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
+@SessionAttributes("user")
 @Controller
 public class AcessoController {
+
+    @Autowired
+   private UsuarioService usuarioService;
 
     @GetMapping(value="/")
     public String telaLogin(){
@@ -18,18 +25,16 @@ public class AcessoController {
     @PostMapping(value = "/login")
     public String telaInicial(Model model, @RequestParam String email , @RequestParam String senha ){
 
-        Gerente gerente = null;
+       Usuario usuario =  usuarioService.validar(email, senha);
 
-        if(email.equals(senha)){
-             gerente = new Gerente("Ingrid Nogueira", email);
-        }
+        if (usuario != null) {
 
-        if (gerente != null) {
+            model.addAttribute("user", usuario);
 
             return "/index";
 
         } else{
-            model.addAttribute("mensagem","Autenticação inválida para o gerente " + email + "!");
+            model.addAttribute("mensagem","Autenticação inválida para o usuario " + email + "!");
             return "/login";
 
         }

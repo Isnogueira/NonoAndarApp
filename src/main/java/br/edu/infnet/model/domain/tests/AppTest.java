@@ -2,6 +2,7 @@
 package br.edu.infnet.model.domain.tests;
 
 
+import br.edu.infnet.model.domain.*;
 import br.edu.infnet.model.domain.exceptions.AluguelNegativoOuZeradoException;
 import br.edu.infnet.model.domain.exceptions.AndaresNegativoException;
 import br.edu.infnet.model.domain.exceptions.VagasNegativaException;
@@ -17,11 +18,6 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 import org.springframework.core.io.ClassPathResource;
-
-/**
- *
- * @author IngridNogueira
- */
 
 public class AppTest {
     

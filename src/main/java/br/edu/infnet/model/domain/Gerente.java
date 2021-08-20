@@ -10,7 +10,6 @@ public class Gerente {
     private String nome;
     private String email;
     private String telefone;
-    private String senha;
 
     public Gerente() {
     }
@@ -21,10 +20,6 @@ public class Gerente {
         this.telefone = telefone;
     }
 
-    public Gerente(String email, String senha) {
-        this.email = email;
-        this.senha = senha;
-    }
 
     public Integer getId() {
         return id;
@@ -58,13 +53,6 @@ public class Gerente {
         this.telefone = telefone;
     }
 
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
 
     @Override
     public String toString() {
@@ -75,9 +63,6 @@ public class Gerente {
         sb.append(this.email);
         sb.append(";");
         sb.append(this.telefone);
-        sb.append(";");
-        sb.append(this.senha);
-        sb.append(";");
        
         return sb.toString();
     }
