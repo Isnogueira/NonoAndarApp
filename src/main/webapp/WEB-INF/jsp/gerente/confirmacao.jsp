@@ -11,18 +11,9 @@ pageEncoding="UTF-8"%>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
-         .navbar {
-             background-color:rgb(6, 25, 36);
-             color: rgb(255, 255, 255);
-         }
          body {
              background-color: rgb(241, 248, 253);
              color: rgb(6, 25, 36);
-         }
-         footer {
-             background-color:rgb(6, 25, 36);
-             color: rgb(179, 217, 240);
-             padding: 15px;
          }
   </style>
 </head>

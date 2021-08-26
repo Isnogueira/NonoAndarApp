@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login</title>
+    <title>Registrar</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <style>
             body {
@@ -17,7 +17,8 @@
         </style>
 </head>
 <body>
-  <form id="login-form" class="form" action="/login" method="post">
+<c:import url="/WEB-INF/jsp/menu.jsp"/>
+  <form id="login-form" class="form" action="/usuario" method="post">
       <div class="container">
          <c:if test="${not empty mensagem}">
              <div class="alert alert-danger">
@@ -26,7 +27,11 @@
          </c:if>
       </div>
          <div class="container">
-             <h3 class="text-center text-info">Login</h3>
+             <h3 class="text-center text-info">Registrar</h3>
+                 <div class="form-group">
+                     <label for="nome" class="text-info">Nome</label><br>
+                     <input type="text" name="nome" id="nome" class="form-control">
+                 </div>
                  <div class="form-group">
                      <label for="email" class="text-info">E-mail:</label><br>
                      <input type="email" name="email" id="email" class="form-control">
@@ -35,13 +40,14 @@
                      <label for="senha" class="text-info">Senha:</label><br>
                      <input type="password" name="senha" id="senha" class="form-control">
                  </div>
+                 <br>
                  <div class="form-group">
-                     <label for="remember-me" class="text-info"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
-                     <input type="submit" name="submit" class="btn btn-info btn-md" value="Entrar">
+                     <input type="submit" name="submit" class="btn btn-primary btn-lg btn-block" value="Enviar">
                  </div>
          </div>
-  <hr>
- <c:import url="/WEB-INF/jsp/footer.jsp"/>
+         <br>
 </form>
+<hr>
+<c:import url="/WEB-INF/jsp/footer.jsp"/>
 </body>
 </html>

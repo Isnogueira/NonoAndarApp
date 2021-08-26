@@ -9,22 +9,27 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
       <style>
-             .navbar {
-                 background-color:rgb(6, 25, 36);
-                 color: rgb(255, 255, 255);
-             }
-             body {
-                 background-color: rgb(241, 248, 253);
-                 color: rgb(6, 25, 36);
-             }
-             footer {
-                 background-color:rgb(6, 25, 36);
-                 color: rgb(179, 217, 240);
-                 padding: 15px;
-             }
+          .bg-4 {
+            background-color:rgb(6, 25, 36);
+            color: rgb(179, 217, 240);
+          }
+            .container-fluid {
+              padding-top: 70px;
+              padding-bottom: 70px;
+            }
+            footer {
+                background-color:rgb(6, 25, 36);
+                color: rgb(179, 217, 240);
+                padding: 15px;
+            }
       </style>
+
  <body>
-    <footer class="container-fluid text-center">
+ <div class="container-fluid bg-3 text-center">
+   <h4>Github do projeto</h4>
+   <a href="https://github.com/Isnogueira/NonoAndarApp">https://github.com/Isnogueira/NonoAndarApp</a>
+ </div>
+    <footer class="container-fluid bg-4 text-center">
          <p>&copy Ingrid Nogueira 2021</p>
     </footer>
  </body>

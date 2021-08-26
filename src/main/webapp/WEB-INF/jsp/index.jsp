@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -26,30 +27,23 @@
             padding-top: 70px;
             padding-bottom: 70px;
           }
-            footer {
-                      background-color:rgb(6, 25, 36);
-                      color: rgb(179, 217, 240);
-                      padding: 15px;
-                  }
+
     </style>
 </head>
 <body>
+  <c:import url="/WEB-INF/jsp/menu.jsp"/>
 <div class="container-fluid bg-1 text-center">
+   <!-- <h3>Bem vindo(a) ${user.nome}!</h3> -->
+    <br>
    <h3>Quem sou eu?</h3>
    <img src="/img/eu.jpeg" class="img-circle" alt="eu" width="350" height="350">
-   <h3>${user.nome} - Aluna de ADS  Bloco Java </h3>
+   <h3>Ingrid Nogueira - Aluna de ADS  Bloco Java </h3>
  </div>
  <div class="container-fluid bg-2 text-center">
    <h3>Sobre o projeto</h3>
    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
    <a href="#" class="btn btn-default btn-lg">Começar</a>
  </div>
- <div class="container-fluid bg-3 text-center">
-   <h3>GitHub</h3>
-       <a href="https://github.com/Isnogueira">https://github.com/Isnogueira</a>
- </div>
-<footer class="container-fluid text-center">
-       <p>&copy Ingrid Nogueira 2021</p>
-</footer>
+ <c:import url="/WEB-INF/jsp/footer.jsp"/>
 </body>
 </html>
