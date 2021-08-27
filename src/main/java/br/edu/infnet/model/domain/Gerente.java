@@ -3,6 +3,7 @@ package br.edu.infnet.model.domain;
 import javax.persistence.*;
 
 @Entity
+@Table(name="tgerente")
 public class Gerente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -10,6 +11,9 @@ public class Gerente {
     private String nome;
     private String email;
     private String telefone;
+    @ManyToOne
+    @JoinColumn(name = "idUsuario")
+    private Usuario usuario;
 
     public Gerente() {
     }
@@ -53,6 +57,13 @@ public class Gerente {
         this.telefone = telefone;
     }
 
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
 
     @Override
     public String toString() {

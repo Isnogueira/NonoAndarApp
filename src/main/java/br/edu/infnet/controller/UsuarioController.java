@@ -23,8 +23,6 @@ public class UsuarioController {
 
         usuarioService.incluir(usuario);
 
-        System.out.println("Inclusão realizada com sucesso:" + usuario.getNome());
-
-        return "redirect:/";
+        return "redirect:/login";
     }
 }

@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.support.SessionStatus;
+
+import javax.servlet.http.HttpSession;
 
 @SessionAttributes("user")
 @Controller
@@ -25,6 +28,15 @@ public class AcessoController {
     @GetMapping(value="/login")
     public String telaLogin(){
         return "/login";
+    }
+
+    @GetMapping(value="/logout")
+    public String logout(HttpSession session, SessionStatus status){
+        status.setComplete();
+
+        session.removeAttribute("user");
+
+        return "redirect:/";
     }
 
     @PostMapping(value = "/login")

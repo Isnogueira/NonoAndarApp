@@ -4,14 +4,13 @@ import br.edu.infnet.model.domain.Gerente;
 import br.edu.infnet.model.repository.GerenteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-;
 import java.util.List;
 import java.util.Optional;
 
 @Service
 public class GerenteService {
 
-  /*  @Autowired
+     @Autowired
     private GerenteRepository gerenteRepository;
 
     public List<Gerente> obterLista(){
@@ -34,6 +33,4 @@ public class GerenteService {
 
         return gerenteRepository.findById(id);
     }
-
-   */
 }
