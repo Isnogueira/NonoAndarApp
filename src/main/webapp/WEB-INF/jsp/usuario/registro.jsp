@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -57,37 +56,39 @@
                     padding-bottom: 70px;
                 }
      </style>
-<head>
-<body>
-  <c:import url="/WEB-INF/jsp/menu.jsp"/>
-  <form action="/gerente/incluir" method="post">
-        <div class="container text-center">
-            <h2>Cadastro de Gerentes<h2>
-        </div>
-        <div class="container">
-            <div class="form-group">
-             <label for="nome">Nome</label>
-                <input type="text" class="form-control" name="nome">
-            </div>
-        </div>
-        <br>
-        <div class="container">
-            <label for="fone">Whatsapp:</label>
-            <input type="number" class="form-control" name="telefone">
-        </div>
-        <hr>
-        <div class="container">
-             <div class="form-group">
-                <label for="email">E-mail:</label>
-                <input type="email" class="form-control" name="email">
-            </div>
-        </div>
-        <br>
+</head>
+</body>
+    <c:import url="/WEB-INF/jsp/menu.jsp"/>
+      <form id="login-form" class="form" action="/usuario" method="post">
+          <div class="container">
+             <c:if test="${not empty mensagem}">
+                 <div class="alert alert-danger">
+                    <strong>ERRO: </strong>${mensagem}
+                  </div>
+             </c:if>
+          </div>
          <div class="container">
-             <button type="submit" class="btn btn-primary btn-lg btn-block" name="enviar">Enviar</button>
+             <h3 class="text-center text-info">Registrar</h3>
+                 <div class="form-group">
+                     <label for="nome" class="text-info">Nome</label><br>
+                     <input type="text" name="nome" id="nome" class="form-control">
+                 </div>
+                 <div class="form-group">
+                     <label for="email" class="text-info">E-mail:</label><br>
+                     <input type="email" name="email" id="email" class="form-control">
+                 </div>
+                 <div class="form-group">
+                     <label for="senha" class="text-info">Senha:</label><br>
+                     <input type="password" name="senha" id="senha" class="form-control">
+                 </div>
+                 <br>
+                 <div class="form-group">
+                     <input type="submit" name="submit" class="btn btn-primary btn-lg btn-block" value="Enviar">
+                 </div>
          </div>
          <br>
-        <c:import url="/WEB-INF/jsp/footer.jsp"/>
-  </form>
+      </form>
+      <hr>
+      <c:import url="/WEB-INF/jsp/footer.jsp"/>
 </body>
 </html>

@@ -16,6 +16,7 @@
            <ul class="nav navbar-nav navbar">
               <c:if test="${not empty user}">
                 <li><a href="/gerente/lista">Gerentes</a></li>
+                <li><a href="/usuario/lista">Usuários</a></li>
               </c:if>
           </ul>
           <ul class="nav navbar-nav navbar-right">

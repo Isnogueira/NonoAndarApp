@@ -11,42 +11,50 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
          <style>
-            .navbar {
-              padding-top: 15px;
-              padding-bottom: 15px;
-              border: 0;
-              border-radius: 0;
-              margin-bottom: 0;
-              font-size: 12px;
-              letter-spacing: 5px;
-            }
+               .navbar {
+                     padding-top: 15px;
+                     padding-bottom: 15px;
+                     border: 0;
+                     border-radius: 0;
+                     margin-bottom: 0;
+                     font-size: 12px;
+                     letter-spacing: 5px;
+                   }
 
-            .navbar-nav li a:hover {
-              color: #1abc9c !important;
-            }
+                   .navbar-nav li a:hover {
+                     color: #1abc9c !important;
+                   }
 
-             .bg-2 {
-                background-color: #474e5d;
-                color: #ffffff;
-            }
-            .bg-3 {
-                background-color: #ffffff;
-                color: #555555;
-            }
+                   body {
+                         margin: 0;
+                         padding: 0;
+                         background-color: #ffffff;
+                         height: 100vh;
+                   }
 
-            body {
-                  margin: 0;
-                  padding: 0;
-                  background-color: #ffffff;
-                  height: 100vh;
-                }
+                   footer {
+                   background-color:rgb(6, 25, 36);
+                   color: rgb(179, 217, 240);
+                   padding: 15px;
+                   }
 
-            footer {
-            background-color:rgb(6, 25, 36);
-            color: rgb(179, 217, 240);
-            padding: 15px;
-            }
+                   .bg-1 {
+                      background-image: url("img/background.jpg");
+                       color: #ffffff;
+                   }
+                   .bg-2 {
+                       background-color: #474e5d;
+                       color: #ffffff;
+                   }
+                   .bg-3 {
+                       background-color: #ffffff;
+                       color: #555555;
+                   }
 
+                   .container-fluid {
+                       padding-top: 70px;
+                       padding-bottom: 70px;
+                   }
          </style>
     <head>
     <body>

@@ -14,7 +14,7 @@ public class Usuario {
     private String email;
     private String senha;
     private boolean admin;
-    @OneToMany
+    @OneToMany(cascade = CascadeType.REMOVE, orphanRemoval = true)
     @JoinColumn(name = "idUsuario")
     private List<Gerente> gerentes;
 

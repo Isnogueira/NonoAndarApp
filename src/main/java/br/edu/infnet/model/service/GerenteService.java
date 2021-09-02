@@ -1,6 +1,7 @@
 package br.edu.infnet.model.service;
 
 import br.edu.infnet.model.domain.Gerente;
+import br.edu.infnet.model.domain.Usuario;
 import br.edu.infnet.model.repository.GerenteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,6 +13,10 @@ public class GerenteService {
 
      @Autowired
     private GerenteRepository gerenteRepository;
+
+     public List<Gerente> obterLista(Usuario usuario){
+         return gerenteRepository.obterLista(usuario.getId());
+     }
 
     public List<Gerente> obterLista(){
 
@@ -33,4 +38,5 @@ public class GerenteService {
 
         return gerenteRepository.findById(id);
     }
+
 }

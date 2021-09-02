@@ -6,10 +6,7 @@ import br.edu.infnet.model.service.GerenteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.SessionAttribute;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
@@ -26,9 +23,9 @@ public class GerenteController {
 
 
     @GetMapping(value="/gerente/lista")
-    public String telaLista(Model model){
+    public String telaLista(Model model, @SessionAttribute("user") Usuario usuario){
 
-        model.addAttribute("lista", gerenteService.obterLista());
+        model.addAttribute("lista", gerenteService.obterLista(usuario));
 
         return "/gerente/lista";
     }
@@ -42,11 +39,11 @@ public class GerenteController {
 
         model.addAttribute("mensagem", gerente.getNome() + " foi cadastrado com sucesso!");
 
-        return telaLista(model);
+        return telaLista(model, usuario);
     }
 
     @GetMapping(value = "/gerente/{id}/excluir")
-    public String excluir(Model model, @PathVariable Integer id){
+    public String excluir(Model model, @PathVariable Integer id, @SessionAttribute("user") Usuario usuario){
 
         Optional<Gerente> gerenteExcluido = gerenteService.obterPorId(id);
 
@@ -60,7 +57,7 @@ public class GerenteController {
 
         model.addAttribute("mensagem", msg);
 
-        return telaLista(model);
+        return telaLista(model, usuario);
 
     }
 
