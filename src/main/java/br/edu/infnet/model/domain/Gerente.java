@@ -3,7 +3,7 @@ package br.edu.infnet.model.domain;
 import javax.persistence.*;
 
 @Entity
-@Table(name="tgerente")
+@Table(name="tGerente")
 public class Gerente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

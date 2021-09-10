@@ -1,19 +1,24 @@
 package br.edu.infnet.model.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 import br.edu.infnet.model.domain.exceptions.AluguelNegativoOuZeradoException;
 import br.edu.infnet.model.domain.exceptions.CondominioNegativoOuZeradoException;
 
+@Entity
+@Table(name = "tEscritorio")
 public class Escritorio extends Imovel {
     
     private float condominio;
     private boolean wifiIncluso;
     private boolean portaria24hrs;
 
-    public Escritorio(String endereco, String cidade, String estado, String tipoAquisicao, int quartos, int banheiros, float valorVenda, float valorAluguel, int metrosQuadrados, float valorMetroQuadrado, boolean mobiliado) {
-        super(endereco, cidade, estado, tipoAquisicao, quartos, banheiros, valorVenda, valorAluguel, metrosQuadrados, valorMetroQuadrado, mobiliado);
-    }
+    public Escritorio() {
+	
+	}
 
-    public float getCondominio() {
+	public float getCondominio() {
         return condominio;
     }
 

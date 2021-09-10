@@ -10,13 +10,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">Home</a>
+          <a class="navbar-brand" href="/">NonoAndarApp</a>
         </div>
          <div class="collapse navbar-collapse" id="myNavbar">
            <ul class="nav navbar-nav navbar">
               <c:if test="${not empty user}">
-                <li><a href="/gerente/lista">Gerentes</a></li>
                 <li><a href="/usuario/lista">Usuários</a></li>
+                <li><a href="/gerente/lista">Gerentes</a></li>
+                <li><a href="/apartamento/lista">Apartamentos</a></li>
+                <li><a href="/casa/lista">Casas</a></li>
+                <li><a href="/escritorio/lista">Escritórios</a></li>
               </c:if>
           </ul>
           <ul class="nav navbar-nav navbar-right">

@@ -1,8 +1,14 @@
 package br.edu.infnet.model.domain;
 
 import br.edu.infnet.model.domain.exceptions.VagasNegativaException;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 import br.edu.infnet.model.domain.exceptions.CondominioNegativoOuZeradoException;
 
+@Entity
+@Table(name = "tApartamento")
 public class Apartamento extends Imovel {
     
     private float valorCondomínio;
@@ -12,25 +18,7 @@ public class Apartamento extends Imovel {
 
     public Apartamento() {
     }
-
-    public Apartamento(String endereco, String cidade) {
-        super(endereco, cidade);
-    }
-
-    public Apartamento(String endereco, String cidade, String estado, String tipoAquisicao, int quartos, int banheiros, float valorVenda, float valorAluguel, int metrosQuadrados, float valorMetroQuadrado, boolean mobiliado) {
-        super(endereco,
-                cidade,
-                estado,
-                tipoAquisicao,
-                quartos,
-                banheiros,
-                valorVenda,
-                valorAluguel,
-                metrosQuadrados,
-                valorMetroQuadrado,
-                mobiliado);
-  
-    }
+    
     
     public float getValorCondomínio() {
         return valorCondomínio;

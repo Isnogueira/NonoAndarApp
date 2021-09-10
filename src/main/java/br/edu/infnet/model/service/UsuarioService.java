@@ -1,6 +1,5 @@
 package br.edu.infnet.model.service;
 
-import br.edu.infnet.model.domain.Gerente;
 import br.edu.infnet.model.domain.Usuario;
 import br.edu.infnet.model.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;

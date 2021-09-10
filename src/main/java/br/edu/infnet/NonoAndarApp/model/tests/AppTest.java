@@ -1,13 +1,11 @@
 
-package br.edu.infnet.model.domain.tests;
+package br.edu.infnet.NonoAndarApp.model.tests;
 
-
-import br.edu.infnet.model.domain.*;
-import br.edu.infnet.model.domain.exceptions.AluguelNegativoOuZeradoException;
-import br.edu.infnet.model.domain.exceptions.AndaresNegativoException;
-import br.edu.infnet.model.domain.exceptions.VagasNegativaException;
-import br.edu.infnet.model.domain.exceptions.CondominioNegativoOuZeradoException;
-
+import br.edu.infnet.NonoAndarApp.model.domain.*;
+import br.edu.infnet.NonoAndarApp.model.exceptions.AluguelNegativoOuZeradoException;
+import br.edu.infnet.NonoAndarApp.model.exceptions.AndaresNegativoException;
+import br.edu.infnet.NonoAndarApp.model.exceptions.CondominioNegativoOuZeradoException;
+import br.edu.infnet.NonoAndarApp.model.exceptions.VagasNegativaException;
 import java.io.BufferedWriter;
 import java.io.BufferedReader;
 import java.io.FileWriter;
@@ -16,8 +14,12 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-
 import org.springframework.core.io.ClassPathResource;
+
+/**
+ *
+ * @author IngridNogueira
+ */
 
 public class AppTest {
     
@@ -116,7 +118,7 @@ public class AppTest {
             leitura.close();
             fileW.close();
             
-        } catch (AluguelNegativoOuZeradoException | CondominioNegativoOuZeradoException | VagasNegativaException
+        } catch (AluguelNegativoOuZeradoException | CondominioNegativoOuZeradoException | VagasNegativaException 
                 | AndaresNegativoException | IOException ex) {
              System.out.println(ex.getMessage());
         

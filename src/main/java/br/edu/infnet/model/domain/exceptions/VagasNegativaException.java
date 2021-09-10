@@ -2,7 +2,9 @@ package br.edu.infnet.model.domain.exceptions;
 
 public class VagasNegativaException extends Exception {
 
-    public VagasNegativaException(String message) {
+	private static final long serialVersionUID = 1L;
+
+	public VagasNegativaException(String message) {
         super(message);
     }
     

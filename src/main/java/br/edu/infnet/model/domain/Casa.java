@@ -1,19 +1,25 @@
 package br.edu.infnet.model.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 import br.edu.infnet.model.domain.exceptions.AluguelNegativoOuZeradoException;
 import br.edu.infnet.model.domain.exceptions.AndaresNegativoException;
 
+@Entity
+@Table(name = "tCasa")
 public class Casa extends Imovel {
     
     private boolean garagem;
     private boolean quintal;
     private int andares;
 
-    public Casa(String endereco, String cidade, String estado, String tipoAquisicao, int quartos, int banheiros, float valorVenda, float valorAluguel, int metrosQuadrados, float valorMetroQuadrado, boolean mobiliado) {
-        super(endereco, cidade, estado, tipoAquisicao, quartos, banheiros, valorVenda, valorAluguel, metrosQuadrados, valorMetroQuadrado, mobiliado);
-    }
-    
-    public boolean isGaragem() {
+ 
+    public Casa() {
+		
+	}
+
+	public boolean isGaragem() {
         return garagem;
     }
 

@@ -1,11 +1,20 @@
 package br.edu.infnet.model.domain;
 
-import javax.persistence.*;
 import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "tusuario")
+@Table(name = "tUsuario")
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,6 +23,9 @@ public class Usuario {
     private String email;
     private String senha;
     private boolean admin;
+    @OneToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "idEndereco")
+    private Endereco endereco;
     @OneToMany(cascade = CascadeType.REMOVE, orphanRemoval = true)
     @JoinColumn(name = "idUsuario")
     private List<Gerente> gerentes;
@@ -73,4 +85,14 @@ public class Usuario {
     public void setGerentes(List<Gerente> gerentes) {
         this.gerentes = gerentes;
     }
+
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
+    
+    
 }

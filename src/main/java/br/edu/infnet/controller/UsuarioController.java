@@ -1,17 +1,17 @@
 package br.edu.infnet.controller;
 
-import br.edu.infnet.model.domain.Gerente;
-import br.edu.infnet.model.domain.Usuario;
-import br.edu.infnet.model.service.UsuarioService;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.SessionAttribute;
 
-import java.util.Optional;
+import br.edu.infnet.model.domain.Endereco;
+import br.edu.infnet.model.domain.Usuario;
+import br.edu.infnet.model.service.UsuarioService;
 
 @Controller
 public class UsuarioController {
@@ -25,8 +25,10 @@ public class UsuarioController {
     }
 
     @PostMapping (value="/usuario")
-    public String incluir(Usuario usuario){
+    public String incluir(Usuario usuario, Endereco endereco){
 
+    	usuario.setEndereco(endereco);
+    	
         usuarioService.incluir(usuario);
 
         return "redirect:/";

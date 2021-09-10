@@ -1,4 +1,13 @@
 package br.edu.infnet.model.repository;
 
-public interface ApartamentoRepository {
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import br.edu.infnet.model.domain.Apartamento;
+
+
+@Repository
+public interface ApartamentoRepository extends CrudRepository<Apartamento, Integer> {
+	
+	
 }
