@@ -17,6 +17,14 @@ public class Escritorio extends Imovel {
     public Escritorio() {
 	
 	}
+    
+	public Escritorio(float condominio, boolean wifiIncluso, boolean portaria24hrs) {
+	
+		this.condominio = condominio;
+		this.wifiIncluso = wifiIncluso;
+		this.portaria24hrs = portaria24hrs;
+	}
+
 
 	public float getCondominio() {
         return condominio;

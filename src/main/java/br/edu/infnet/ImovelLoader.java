@@ -18,6 +18,7 @@ public class ImovelLoader implements ApplicationRunner {
 	public void run(ApplicationArguments args) throws Exception {
 		
 		Apartamento apto = new Apartamento();
+		apto.setEndereco("Rua Padrão n°1");
 		apto.setTipoAquisicao("Aluguel");
 		apto.setQuartos(2);
 		apto.setBanheiros(2);
@@ -25,7 +26,7 @@ public class ImovelLoader implements ApplicationRunner {
 		apto.setValorVenda(1400000);
 		apto.setMetrosQuadrados(100);
 		apto.setValorMetroQuadrado(100);
-		apto.setValorCondomínio(900);
+		apto.setValorCondominio(900);
 		apto.setMobiliado(false);
 		apto.setSuite(false);
 		apto.setPetFriendly(false);
@@ -34,6 +35,7 @@ public class ImovelLoader implements ApplicationRunner {
 		apartamentoService.incluir(apto);
 		
 		Apartamento apto2 = new Apartamento();
+		apto2.setEndereco("Rua Padrão n°2");
 		apto2.setTipoAquisicao("Venda");
 		apto2.setQuartos(3);
 		apto2.setBanheiros(2);
@@ -41,7 +43,7 @@ public class ImovelLoader implements ApplicationRunner {
 		apto2.setValorVenda(1400000);
 		apto2.setMetrosQuadrados(100);
 		apto2.setValorMetroQuadrado(100);
-		apto2.setValorCondomínio(900);
+		apto2.setValorCondominio(900);
 		apto2.setMobiliado(false);
 		apto2.setSuite(false);
 		apto2.setPetFriendly(false);

@@ -1,17 +1,16 @@
 package br.edu.infnet.model.domain;
 
-import br.edu.infnet.model.domain.exceptions.VagasNegativaException;
-
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
 import br.edu.infnet.model.domain.exceptions.CondominioNegativoOuZeradoException;
+import br.edu.infnet.model.domain.exceptions.VagasNegativaException;
 
 @Entity
 @Table(name = "tApartamento")
 public class Apartamento extends Imovel {
     
-    private float valorCondomínio;
+    private float valorCondominio;
     private boolean suite;
     private int vagas;
     private boolean petFriendly;
@@ -20,13 +19,13 @@ public class Apartamento extends Imovel {
     }
     
     
-    public float getValorCondomínio() {
-        return valorCondomínio;
+    public float getValorCondominio() {
+        return valorCondominio;
     }
 
-    public void setValorCondomínio(float valorCondomínio){
+    public void setValorCondominio(float valorCondominio){
         
-        this.valorCondomínio = valorCondomínio;
+        this.valorCondominio = valorCondominio;
     }
 
     public boolean isSuite() {
@@ -58,7 +57,7 @@ public class Apartamento extends Imovel {
     @Override
     public float calcularValorTotalAluguel() throws CondominioNegativoOuZeradoException, VagasNegativaException {
         
-        if (this.valorCondomínio <= 0){
+        if (this.valorCondominio <= 0){
             throw new CondominioNegativoOuZeradoException("[Apartamento] Valor de aluguel informado está Negativo ou Zerado!");
         } 
         
@@ -66,7 +65,7 @@ public class Apartamento extends Imovel {
             throw new VagasNegativaException("[Apartamento] O número de vagas está negativo!");
         }
         
-        return this.getValorAluguel() + this.valorCondomínio + this.vagas * 30;
+        return this.getValorAluguel() + this.valorCondominio + this.vagas * 30;
     }
    
     @Override
@@ -74,7 +73,7 @@ public class Apartamento extends Imovel {
         
         StringBuilder sb = new StringBuilder();
         sb.append(super.toString());
-        sb.append(this.valorCondomínio);
+        sb.append(this.valorCondominio);
         sb.append(";");
         sb.append(this.suite ? "S" : "N");
         sb.append(";");

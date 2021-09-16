@@ -3,7 +3,7 @@
 <!DOCTYPE = html>
 <html lang="pt-BR">
 <head>
-<title>Registrar</title>
+<title>Listagem de gerentes</title>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -72,13 +72,13 @@ footer {
 			</div>
 		</c:if>
 		<c:if test="${not empty lista}">
-		<form action="/gerente" method="get">
-			<h4>
-				Quantidade de gerentes cadastrados: ${lista.size()}
+			<form action="/gerente" method="get">
+				<h4>
+					Quantidade de gerentes cadastrados: ${lista.size()}
 					<button type="submit" class="btn btn-default btn-lg" name="tela"
-						value="lista">Incluir</button>		
-			</h4>
-		</form>	
+						value="lista">Incluir</button>
+				</h4>
+			</form>
 			<br>
 			<table class="table table-striped">
 				<thead>
@@ -105,7 +105,8 @@ footer {
 		</c:if>
 		<c:if test="${empty lista}">
 			<h4>
-				Não existem gerentes cadastrados! | <a href="/gerente">Incluir</a>
+				Não existem gerentes cadastrados! | <a href="/gerente"
+					class="btn btn-default btn-lg">Incluir</a>
 			</h4>
 		</c:if>
 	</div>

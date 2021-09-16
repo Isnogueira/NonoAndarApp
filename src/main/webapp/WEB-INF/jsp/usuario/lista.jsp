@@ -72,13 +72,9 @@ footer {
 			</div>
 		</c:if>
 		<c:if test="${not empty lista}">
-			<form action="/casa" method="get">
-				<h4>
-					Quantidade de usuarios cadastrados: ${lista.size()}
-					<button type="submit" class="btn btn-default btn-lg" name="tela"
-						value="usuarios">Incluir</button>
-				</h4>
-			</form>
+			<h4>
+				Quantidade de usuarios cadastrados: ${lista.size()}
+			</h4>	
 			<br>
 			<table class="table table-striped">
 				<thead>

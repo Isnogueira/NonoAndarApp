@@ -3,7 +3,7 @@
 <!DOCTYPE = html>
 <html lang="pt-BR">
 <head>
-<title>Listagem de imoveis</title>
+<title>Listagem de escritórios</title>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -72,7 +72,7 @@ footer {
 			</div>
 		</c:if>
 		<c:if test="${not empty escritorios}">
-			<form action="/casa" method="get">
+			<form action="/escritorio" method="get">
 				<h4>
 					Quantidade de escritórios cadastradas: ${escritorios.size()}
 					<button type="submit" class="btn btn-default btn-lg" name="tela"
@@ -85,11 +85,12 @@ footer {
 					<tr>
 						<th>ID</th>
 						<th>Data do cadastro</th>
+						<th>Endereço</th>
 						<th>Valor de venda</th>
 						<th>Valor de aluguel</th>
 						<th>Valor de Condomínio</th>
-						<th>Possui wifi incluso?</th>
-						<th>Possui portaria 24 horas?</th>
+						<th>Wifi incluso</th>
+						<th>Portaria 24 horas</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -97,6 +98,7 @@ footer {
 						<tr>
 							<td>${escr.id}</td>
 							<td>${escr.dataAnuncio}</td>
+							<td>${escr.endereco}</td>
 							<td>${escr.valorVenda}</td>
 							<td>${escr.valorAluguel}</td>
 							<td>${escr.condominio}</td>
@@ -110,8 +112,8 @@ footer {
 		</c:if>
 		<c:if test="${empty escritorios}">
 			<h4>
-				Não existem escritórios cadastrados! | <a href="/escritorio">Incluir
-				
+				Não existem escritórios cadastrados! | <a href="/escritorio"
+					class="btn btn-default btn-lg">Incluir</a> 
 			</h4>
 		</c:if>
 	</div>

@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.edu.infnet.model.domain.Escritorio;
+import br.edu.infnet.model.domain.Usuario;
 import br.edu.infnet.model.repository.EscritorioRepository;
 
 @Service
@@ -19,6 +20,11 @@ public class EscritorioService {
 	public List<Escritorio> obterLista(){
 	
 		return (List<Escritorio>) escritorioRepository.findAll();
+	}
+	
+	public List<Escritorio> obterLista(Usuario usuario){
+		
+		return (List<Escritorio>) escritorioRepository.obterLista(usuario.getId());
 	}
 	
 

@@ -1,5 +1,6 @@
 package br.edu.infnet.controller;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,11 +15,13 @@ public class EnderecoController {
 	@Autowired
 	private EnderecoService enderecoService;
 	
-	@PostMapping(value = "/cep")
-	public String obterCep(Model model, @RequestParam String cep) {
+	
+	@PostMapping(value = "usuario/cep")
+	public String obterCepUsuario(Model model, @RequestParam String cep) {
 		
 		model.addAttribute("meuEndereco", enderecoService.obterCep(cep));
 		
 		return "/usuario/registro";
 	}
+
 }

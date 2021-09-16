@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class Gerente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private  Integer id;
+    private Integer id;
     private String nome;
     private String email;
     private String telefone;
@@ -23,7 +23,6 @@ public class Gerente {
         this.email = email;
         this.telefone = telefone;
     }
-
 
     public Integer getId() {
         return id;

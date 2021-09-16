@@ -73,7 +73,7 @@ footer {
 </div>		
 <div class="container">	
 	<h3 class="text-center text-info">Registrar</h3>
-	<form action="/cep" class="form-inline" method="post">	
+	<form action="usuario/cep" class="form-inline" method="post">	
 		<div class="form-group">
 			<label for="cep" class="text-info">CEP</label><br> <input
 			type="text" name="cep" id="cep" class="form-control">

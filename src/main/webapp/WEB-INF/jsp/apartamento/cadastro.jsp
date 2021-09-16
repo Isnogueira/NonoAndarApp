@@ -70,6 +70,15 @@ footer {
 		<br>
 		<div class="container">
 			<div class="form-group">
+				<label for="endereco">Endereço</label> <input type="text"
+					class="form-control" id="endereco"
+					placeholder="Entre com o endereço do imóvel" value="Rua Padrão n°2"
+					name="endereco">
+			</div>
+		</div>
+		<br>
+		<div class="container">
+			<div class="form-group">
 				<label for="valorVenda">Valor de venda:</label> <input type="number"
 					class="form-control" id="valorVenda"
 					placeholder="Entre com o valor de venda" value="10000"
@@ -85,24 +94,24 @@ footer {
 					name="valorAluguel">
 			</div>
 		</div>
-		<<br>
+		<br>
 		<div class="container">
 			<div class="form-group">
-				<label for="ValorCondomínio">Valor condomínio:</label> <input
-					type="number" class="form-control" id="Valorcondomínio"
-					placeholder="Entre com o valor do condominio"
-					name="ValorCondomínio">
+				<label for="valorCondominio">Valor de Condominio:</label> <input
+					type="number" class="form-control" id="valorCondominio"
+					placeholder="Entre com o valor de aluguel" value="800"
+					name="valorCondominio">
 			</div>
 		</div>
 		<br>
 		<div class="container">
 			<p>
-				<b>O imóvel tem suíte?</b>
+				<b>O imóvel possui suíte?</b>
 			</p>
-			<label class="radio-inline">
-				<input type="radio" name="suite" value="true" checked>Sim
-			</label> 
-			<label class="radio-inline"> <input type="radio" name="suite" value="false">Não
+			<label class="radio-inline"> <input type="radio" name="suite"
+				value="true" checked>Sim
+			</label> <label class="radio-inline"> <input type="radio"
+				name="suite" value="false">Não
 			</label>
 		</div>
 		<br>
@@ -122,11 +131,10 @@ footer {
 			<p>
 				<b>O imóvel é Pet-friendly?</b>
 			</p>
-			<label class="radio-inline">
-				 <input type="radio" name="petFriendly" value="true" checked>Sim
-			</label> 
-			<label class="radio-inline"> 
-				<input type="radio" name="petFriendly" value="false">Não
+			<label class="radio-inline"> <input type="radio"
+				name="petFriendly" value="true" checked>Sim
+			</label> <label class="radio-inline"> <input type="radio"
+				name="petFriendly" value="false">Não
 			</label>
 		</div>
 		<br>

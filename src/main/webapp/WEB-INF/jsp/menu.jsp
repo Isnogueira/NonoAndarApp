@@ -20,6 +20,8 @@
                 <li><a href="/apartamento/lista">Apartamentos</a></li>
                 <li><a href="/casa/lista">Casas</a></li>
                 <li><a href="/escritorio/lista">Escritórios</a></li>
+                <li><a href="/imobiliaria/lista">Imobiliárias</a></li>
+                <li><a href="/imovel/lista">Imóveis</a></li>
               </c:if>
           </ul>
           <ul class="nav navbar-nav navbar-right">

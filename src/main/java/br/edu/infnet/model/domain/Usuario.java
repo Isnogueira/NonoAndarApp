@@ -29,6 +29,12 @@ public class Usuario {
     @OneToMany(cascade = CascadeType.REMOVE, orphanRemoval = true)
     @JoinColumn(name = "idUsuario")
     private List<Gerente> gerentes;
+    @OneToMany(cascade = CascadeType.REMOVE, orphanRemoval = true)
+    @JoinColumn(name = "idUsuario")
+    private List<Imovel> imoveis;
+    @OneToMany(cascade = CascadeType.REMOVE, orphanRemoval = true)
+    @JoinColumn(name = "idUsuario")
+    private List<Imobiliaria> imobiliarias;
 
     public Usuario() {
     }
@@ -93,6 +99,23 @@ public class Usuario {
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
+
+	public List<Imovel> getImoveis() {
+		return imoveis;
+	}
+
+	public void setImoveis(List<Imovel> imoveis) {
+		this.imoveis = imoveis;
+	}
+
+	public List<Imobiliaria> getImobiliarias() {
+		return imobiliarias;
+	}
+
+	public void setImobiliarias(List<Imobiliaria> imobiliarias) {
+		this.imobiliarias = imobiliarias;
+	}
     
+	
     
 }

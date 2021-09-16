@@ -18,6 +18,14 @@ public class Casa extends Imovel {
     public Casa() {
 		
 	}
+    
+    
+
+	public Casa(boolean garagem, boolean quintal, int andares) {
+		this.garagem = garagem;
+		this.quintal = quintal;
+		this.andares = andares;
+	}
 
 	public boolean isGaragem() {
         return garagem;

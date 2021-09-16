@@ -67,6 +67,16 @@ footer {
 <body>
 	<c:import url="/WEB-INF/jsp/menu.jsp" />
 	<form action="/escritorio/incluir" method="post">
+	<br>
+		<div class="container">
+			<div class="form-group">
+				<label for="endereco">Endereço</label> <input type="text"
+					class="form-control" id="endereco"
+					placeholder="Entre com o endereço do imóvel" value="Rua Padrão n°2"
+					name="endereco">
+			</div>
+		</div>
+		<br>
 		<div class="container">
 			<div class="form-group">
 				<label for="valorVenda">Valor de venda:</label> <input type="number"
@@ -87,10 +97,10 @@ footer {
 		<br>
 		<div class="container">
 			<div class="form-group">
-				<label for="ValorCondomínio">Valor condomínio:</label> <input
-					type="number" class="form-control" id="Valorcondomínio"
+				<label for="condominio">Valor condomínio:</label> <input
+					type="number" class="form-control" id="condominio"
 					placeholder="Entre com o valor do condominio" value="1000"
-					name="ValorCondomínio">
+					name="condominio">
 			</div>
 		</div>
 		<br>

@@ -3,7 +3,7 @@
 <!DOCTYPE = html>
 <html lang="pt-BR">
 <head>
-<title>Listagem de imoveis</title>
+<title>Listagem de casas</title>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -85,11 +85,12 @@ footer {
 					<tr>
 						<th>ID</th>
 						<th>Data do cadastro</th>
+						<th>Endereco</th>
 						<th>Valor de venda</th>
 						<th>Valor de Aluguel</th>
-						<th>Possui garagem?</th>
-						<th>Possui quintal?</th>
-						<th>Número de andares</th>
+						<th>Garagem</th>
+						<th>Quintal</th>
+						<th>Andares</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -97,6 +98,7 @@ footer {
 						<tr>
 							<td>${casa.id}</td>
 							<td>${casa.dataAnuncio}</td>
+							<td>${casa.endereco}</td>
 							<td>${casa.valorVenda}</td>
 							<td>${casa.valorAluguel}</td>
 							<td>${casa.garagem}</td>
@@ -110,7 +112,8 @@ footer {
 		</c:if>
 		<c:if test="${empty casas}">
 			<h4>
-				Não existem casas cadastradas! | <a href="/casa">Incluir
+				Não existem casas cadastradas! | <a href="/casa"
+					class="btn btn-default btn-lg">Incluir</a>
 			</h4>
 		</c:if>
 	</div>

@@ -7,13 +7,18 @@ import br.edu.infnet.model.domain.exceptions.CondominioNegativoOuZeradoException
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
@@ -26,6 +31,7 @@ public abstract class Imovel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
     private String dataAnuncio;
+    private String endereco;
     @Transient
     private String tipoAquisicao;
     @Transient
@@ -39,24 +45,25 @@ public abstract class Imovel {
     private float valorMetroQuadrado;
     @Transient
     private boolean mobiliado;
+    @ManyToOne
+    @JoinColumn(name = "idUsuario")
+    private Usuario usuario;
+    @ManyToMany( mappedBy = "imoveis")
+    private List<Imobiliaria> imobiliarias;
 
     public Imovel() {
     	
     	DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm");
         dataAnuncio = LocalDateTime.now().format(formato);
     }
+   
 
-    public Imovel(String endereco, String cidade) {
-        this.valorVenda = valorVenda;
-        this.valorAluguel = valorAluguel;
-        
-    }
-
-    public Imovel(Integer id,String dataAnuncio,
-			String tipoAquisicao, int quartos, int banheiros, float valorVenda, float valorAluguel, int metrosQuadrados,
-			float valorMetroQuadrado, boolean mobiliado) {
+	public Imovel(Integer id, String dataAnuncio, String endereco, String tipoAquisicao, int quartos, int banheiros,
+			float valorVenda, float valorAluguel, int metrosQuadrados, float valorMetroQuadrado, boolean mobiliado,
+			Usuario usuario, List<Imobiliaria> imobiliarias) {
 		this.id = id;
 		this.dataAnuncio = dataAnuncio;
+		this.endereco = endereco;
 		this.tipoAquisicao = tipoAquisicao;
 		this.quartos = quartos;
 		this.banheiros = banheiros;
@@ -65,9 +72,11 @@ public abstract class Imovel {
 		this.metrosQuadrados = metrosQuadrados;
 		this.valorMetroQuadrado = valorMetroQuadrado;
 		this.mobiliado = mobiliado;
+		this.usuario = usuario;
+		this.imobiliarias = imobiliarias;
 	}
 
-    public Integer getId() {
+	public Integer getId() {
 		return id;
 	}
 
@@ -83,6 +92,18 @@ public abstract class Imovel {
 	public void setDataAnuncio(String dataAnuncio) {
 		this.dataAnuncio = dataAnuncio;
 	}
+	
+	
+
+	public String getEndereco() {
+		return endereco;
+	}
+
+
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
+
 
 	public String getTipoAquisicao() {
 		return tipoAquisicao;
@@ -147,6 +168,28 @@ public abstract class Imovel {
 	public void setMobiliado(boolean mobiliado) {
 		this.mobiliado = mobiliado;
 	}
+	
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+
+
+	
+	public List<Imobiliaria> getImobiliarias() {
+		return imobiliarias;
+	}
+
+
+	public void setImobiliarias(List<Imobiliaria> imobiliarias) {
+		this.imobiliarias = imobiliarias;
+	}
+
+
 
 	public abstract float calcularValorTotalAluguel() throws CondominioNegativoOuZeradoException, VagasNegativaException,
             AluguelNegativoOuZeradoException, AndaresNegativoException;

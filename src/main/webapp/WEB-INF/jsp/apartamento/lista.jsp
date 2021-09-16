@@ -3,7 +3,7 @@
 <!DOCTYPE = html>
 <html lang="pt-BR">
 <head>
-<title>Listagem de imoveis</title>
+<title>Listagem de apartamentos</title>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -73,32 +73,36 @@ footer {
 		</c:if>
 		<c:if test="${not empty apartamentos}">
 			<form action="/apartamento" method="get">
-			<h4>
-				Quantidade de apartamentos cadastrados: ${apartamentos.size()}
+				<h4>
+					Quantidade de apartamentos cadastrados: ${apartamentos.size()}
 					<button type="submit" class="btn btn-default btn-lg" name="tela"
-						value="apartamentos">Incluir</button>		
-			</h4>
-		</form>	
+						value="apartamentos">Incluir</button>
+				</h4>
+			</form>
 			<br>
 			<table class="table table-striped">
 				<thead>
 					<tr>
 						<th>ID</th>
 						<th>Data do cadastro</th>
+						<th>Endereço</th>
 						<th>Valor de venda</th>
 						<th>Valor de Aluguel</th>
-						<th>Suite?</th>
-						<th>Número de vagas</th>
-						<th>Pet-friendly?</th>
+						<th>Valor do Condominio</th>
+						<th>Suite</th>
+						<th>Vagas</th>
+						<th>Pet-friendly</th>
 					</tr>
 				</thead>
 				<tbody>
 					<c:forEach var="apto" items="${apartamentos}" varStatus="id">
 						<tr>
 							<td>${apto.id}</td>
-							<td>${apto.dataAnuncio}</td>					
+							<td>${apto.dataAnuncio}</td>
+							<td>${apto.endereco}</td>
 							<td>${apto.valorVenda}</td>
 							<td>${apto.valorAluguel}</td>
+							<td>${apto.valorCondominio}</td>
 							<td>${apto.suite}</td>
 							<td>${apto.vagas}</td>
 							<td>${apto.petFriendly}</td>
@@ -109,7 +113,10 @@ footer {
 			</table>
 		</c:if>
 		<c:if test="${empty apartamentos}">
-			<h4>Não existem apartamentos cadastrados! | <a href="/apartamento">Incluir</h4>
+			<h4>
+				Não existem apartamentos cadastrados! | <a href="/apartamento"
+					class="btn btn-default btn-lg">Incluir</a>
+			</h4>
 		</c:if>
 	</div>
 	<br>

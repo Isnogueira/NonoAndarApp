@@ -9,8 +9,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.SessionAttribute;
 
 import br.edu.infnet.model.domain.Casa;
+import br.edu.infnet.model.domain.Usuario;
 import br.edu.infnet.model.service.CasaService;
 
 @Controller
@@ -20,9 +22,9 @@ public class CasaController {
 	private CasaService casaService;
 	
 	@GetMapping(value = "/casa/lista")
-	public String telaLista(Model model) {
+	public String telaLista(Model model, @SessionAttribute("user") Usuario usuario) {
 		
-		List<Casa> casas = casaService.obterLista();
+		List<Casa> casas = casaService.obterLista(usuario);
 		
 		model.addAttribute("casas", casas);
 	
@@ -35,19 +37,21 @@ public class CasaController {
 	}
 	
 	@PostMapping(value = "/casa/incluir")
-	public String incluir(Model model, Casa casa) {
+	public String incluir(Model model, Casa casa, @SessionAttribute("user") Usuario usuario) {
+		
+		casa.setUsuario(usuario);
 		
 		casaService.incluir(casa);
 		
 		model.addAttribute("mensagem", "A casa foi cadastrada com sucesso!");
 		
 		
-		return telaLista(model);
+		return telaLista(model, usuario);
 	}
 	
 	
 	@GetMapping(value = "/casa/{id}/excluir")
-	public String excluir(Model model, @PathVariable Integer id) {
+	public String excluir(Model model, @PathVariable Integer id, @SessionAttribute("user") Usuario usuario) {
 		
 		Optional<Casa> casaExcluida = casaService.obterPorId(id);
 		
@@ -59,14 +63,14 @@ public class CasaController {
 			
 			Casa casa = casaExcluida.get();
 			
-			msg = "A casa de endereço foi excluída com sucesso!";
+			msg = "A casa foi excluída com sucesso!";
 			
 			model.addAttribute("mensagem", msg);
 			
 		}
 		
 		
-		return telaLista(model);
+		return telaLista(model, usuario);
 	}
 	
 }

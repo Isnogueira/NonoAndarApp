@@ -67,6 +67,16 @@ footer {
 <body>
 	<c:import url="/WEB-INF/jsp/menu.jsp" />
 	<form action="/casa/incluir" method="post">
+	<br>
+		<div class="container">
+			<div class="form-group">
+				<label for="endereco">Endereço</label> <input type="text"
+					class="form-control" id="endereco"
+					placeholder="Entre com o endereço do imóvel" value="Rua Padrão n°2"
+					name="endereco">
+			</div>
+		</div>
+		<br>
 		<div class="container">
 			<div class="form-group">
 				<label for="valorVenda">Valor de venda:</label> <input type="number"
