@@ -55,20 +55,24 @@ public class CasaController {
 		
 		Optional<Casa> casaExcluida = casaService.obterPorId(id);
 		
-		String msg = "A casa não pode ser excluída";
+		String msg = null;
 		
-		if(casaExcluida.isPresent()) {
+		try {
+			if(casaExcluida.isPresent()) {
+				
+				casaService.excluir(id);
+				
+				Casa casa = casaExcluida.get();
+				
+				msg = "A casa foi excluída com sucesso!";	
+				
+			}
+		}catch (Exception e) {
 			
-			casaService.excluir(id);
-			
-			Casa casa = casaExcluida.get();
-			
-			msg = "A casa foi excluída com sucesso!";
-			
-			model.addAttribute("mensagem", msg);
-			
+			msg = "A casa não pode ser excluída";
 		}
 		
+		model.addAttribute("mensagem", msg);
 		
 		return telaLista(model, usuario);
 	}

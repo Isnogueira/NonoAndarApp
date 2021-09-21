@@ -64,19 +64,29 @@ footer {
 </style>
 <head>
 <body>
+	<c:set var="botao" value="" />
+
 	<c:import url="/WEB-INF/jsp/menu.jsp" />
 	<br>
 	<form action="/imobiliaria/incluir" method="post">
-		<div class="container">
-			<div class="form-group">
-				<label for="sel1">Gerente</label> <select name="gerente.id"
-					class="form-control" id="sel1">
-					<c:forEach var="gerente" items="${gerentes}">
-						<option value="${gerente.id}">${gerente.nome}</option>
-					</c:forEach>
-				</select>
+		<c:if test="${not empty gerentes}">
+			<div class="container">
+				<div class="form-group">
+					<label for="sel1">Gerente</label> <select name="gerente.id"
+						class="form-control" id="sel1">
+						<c:forEach var="gerente" items="${gerentes}">
+							<option value="${gerente.id}">${gerente.nome}</option>
+						</c:forEach>
+					</select>
+				</div>
 			</div>
-		</div>
+		</c:if>
+		<c:if test="${empty gerentes}">
+			<div class="container">
+				<h4>Não há gerentes cadastrados</h4>
+				<c:set var="botao" value="disabled" />
+			</div>
+		</c:if>
 		<br>
 		<div class="container">
 			<div class="form-group">
@@ -90,22 +100,29 @@ footer {
 				class="form-control" value="789456" name="telefone">
 		</div>
 		<br>
-		<div class="container">
-			<div class="form-group">
-				<label>Imóveis:</label>
-				<c:forEach var="i" items="${imoveis}">
-					<div class="form-check">
-						<label class="form-check-label"><input type="checkbox"
-							name="imoveisId" value="${i.id}"> ${i.endereco}</label>
-					</div>
-				</c:forEach>
-
+		<c:if test="${not empty imoveis}">
+			<div class="container">
+				<div class="form-group">
+					<label>Imóveis:</label>
+					<c:forEach var="i" items="${imoveis}">
+						<div class="form-check">
+							<label class="form-check-label"><input type="checkbox"
+								name="imoveisId" value="${i.id}"> ${i.endereco}</label>
+						</div>
+					</c:forEach>
+				</div>
 			</div>
-		</div>
+		</c:if>
+		<c:if test="${empty imoveis}">
+			<div class="container">
+				<h4>Não há imóveis cadastrados</h4>
+				<c:set var="botao" value="disabled" />
+			</div>
+		</c:if>
 		<br>
 		<div class="container">
-			<button type="submit" class="btn btn-primary btn-lg btn-block"
-				name="enviar">Enviar</button>
+			<button type="submit" ${botao}
+				class="btn btn-primary btn-lg btn-block" name="enviar">Enviar</button>
 		</div>
 		<br>
 		<c:import url="/WEB-INF/jsp/footer.jsp" />

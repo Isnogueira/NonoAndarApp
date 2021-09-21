@@ -72,9 +72,7 @@ footer {
 			</div>
 		</c:if>
 		<c:if test="${not empty lista}">
-			<h4>
-				Quantidade de usuarios cadastrados: ${lista.size()}
-			</h4>	
+			<h4>Quantidade de usuarios cadastrados: ${lista.size()}</h4>
 			<br>
 			<table class="table table-striped">
 				<thead>
@@ -96,7 +94,13 @@ footer {
 							<td>${usuario.email}</td>
 							<td>${usuario.gerentes.size()}</td>
 							<c:if test="${user.admin}">
-								<td><a href="/usuario/${usuario.id}/excluir">Excluir</a></td>
+								<td>
+									<c:choose>
+										<c:when test="${user.id != usuario.id}">
+											<a href="/usuario/${usuario.id}/excluir">Excluir</a>
+										</c:when>
+									</c:choose>
+								</td>
 							</c:if>
 						</tr>
 					</c:forEach>

@@ -24,6 +24,12 @@ public class AcessoController {
     public String telaHome(){
         return "/index";
     }
+    
+    @GetMapping(value = "/app")
+	public String telaApp() {
+		
+		return "/app";
+	}
 
     @GetMapping(value="/login")
     public String telaLogin(){

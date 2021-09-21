@@ -14,6 +14,7 @@ public class Apartamento extends Imovel {
     private boolean suite;
     private int vagas;
     private boolean petFriendly;
+    
 
     public Apartamento() {
     }

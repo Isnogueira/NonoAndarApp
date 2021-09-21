@@ -57,19 +57,25 @@ public class ApartamentoController {
 		 
 		 Optional<Apartamento> apartamentoExcluido = apartamentoService.obterPorId(id);
 		 
-		 String msg = "O apartamento não pode ser excluído";
+		 String msg = null;
 		 
-		 if(apartamentoExcluido.isPresent()) {
+		 try {
+			 if(apartamentoExcluido.isPresent()) {
+				 
+				 apartamentoService.excluir(id);
+				 
+				 Apartamento apartamento = apartamentoExcluido.get();
+				 
+				 msg = "O apartamento foi excluído com sucesso!";
+				 
+			 }
+		 } catch(Exception e){
 			 
-			 apartamentoService.excluir(id);
-			 
-			 Apartamento apartamento = apartamentoExcluido.get();
-			 
-			 msg = "O apartamento foi excluído com sucesso!";
-			 
-			 model.addAttribute("mensagem", msg);
+			 msg = "O apartamento não pode ser excluído";
 		 }
 		 
+		  model.addAttribute("mensagem", msg);
+		  
 		 return telaLista(model, usuario);
 	 }
 }

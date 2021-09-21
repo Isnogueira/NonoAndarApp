@@ -56,18 +56,24 @@ public class EscritorioController {
 		 
 		 Optional<Escritorio> escritorioExcluido = escritorioService.obterPorId(id);
 		 
-		 String msg = "O escritorio não pode ser excluído";
+		 String msg = null;
 		 
-		 if(escritorioExcluido.isPresent()) {
+		 try {
+			 if(escritorioExcluido.isPresent()) {
+				 
+				 escritorioService.excluir(id);
+				 
+				 Escritorio escritorio = escritorioExcluido.get();
+				 
+				 msg = "O escritorio foi excluído com sucesso!";
+				 
+			 }
+		 } catch(Exception e){
 			 
-			 escritorioService.excluir(id);
-			 
-			 Escritorio escritorio = escritorioExcluido.get();
-			 
-			 msg = "O escritorio foi excluído com sucesso!";
-			 
-			 model.addAttribute("mensagem", msg);
+			 msg = "O escritorio não pode ser excluído";
 		 }
+		 
+		 model.addAttribute("mensagem", msg);
 		 
 		 return telaLista(model, usuario);
 	 }

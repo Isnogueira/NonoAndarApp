@@ -47,14 +47,20 @@ public class GerenteController {
 
         Optional<Gerente> gerenteExcluido = gerenteService.obterPorId(id);
 
-        String msg = "O gerente não pode ser excluído";
+        String msg = null;
 
-        if(gerenteExcluido.isPresent()){
-            gerenteService.excluir(id);
-            Gerente gerente = gerenteExcluido.get();
-            msg = "O(A) gerente " + gerente.getNome() + " foi excluído(a) com sucesso!";
-        }
+	     try {
+        	if(gerenteExcluido.isPresent()){
+	            gerenteService.excluir(id);
+	            Gerente gerente = gerenteExcluido.get();
+	            msg = "O(A) gerente " + gerente.getNome() + " foi excluído(a) com sucesso!";
+	        }
 
+	     } catch(Exception e){
+	    	 
+	    	msg = "O gerente não pode ser excluído";
+	    	 
+	     }
         model.addAttribute("mensagem", msg);
 
         return telaLista(model, usuario);

@@ -21,7 +21,7 @@ import br.edu.infnet.model.service.ImobiliariaService;
 import br.edu.infnet.model.service.ImovelService;
 
 @Controller
-public class imobiliariaController {
+public class ImobiliariaController {
 
 	@Autowired
 	private ImobiliariaService imobiliariaService;
