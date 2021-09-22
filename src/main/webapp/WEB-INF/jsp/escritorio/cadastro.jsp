@@ -37,12 +37,6 @@ body {
 	height: 100vh;
 }
 
-footer {
-	background-color: rgb(6, 25, 36);
-	color: rgb(179, 217, 240);
-	padding: 15px;
-}
-
 .bg-1 {
 	background-image: url("img/background.jpg");
 	color: #ffffff;
@@ -56,6 +50,11 @@ footer {
 .bg-3 {
 	background-color: #ffffff;
 	color: #555555;
+}
+
+.bg-4 {
+	background-color: #1a8cff;
+	color: #ffffff;
 }
 
 .container-fluid {
@@ -109,7 +108,7 @@ footer {
 				<b>O imóvel possui wifi incluso?</b>
 			</p>
 			<label class="radio-inline"> <input type="radio"
-				name="wifiIncluso" value="true" checked>Sim
+				name="wifiIncluso" value="true">Sim
 			</label> <label class="radio-inline"> <input type="radio"
 				name="wifiIncluso" value="false">Não
 			</label>
@@ -120,7 +119,7 @@ footer {
 				<b>O imóvel possui portaria 24hrs?</b>
 			</p>
 			<label class="radio-inline"> <input type="radio"
-				name="portaria24hrs" value="true" checked>Sim
+				name="portaria24hrs" value="true">Sim
 			</label> <label class="radio-inline"> <input type="radio"
 				name="portaria24hrs" value="false">Não
 			</label>

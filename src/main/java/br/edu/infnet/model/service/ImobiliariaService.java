@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import br.edu.infnet.model.domain.Imobiliaria;
@@ -18,7 +19,7 @@ public class ImobiliariaService {
 
 	public List<Imobiliaria> obterLista(Usuario usuario) {
 
-		return imobiliariaRepository.obterLista(usuario.getId());
+		return imobiliariaRepository.obterLista(usuario.getId(), Sort.by(Sort.Direction.ASC,"nome"));
 	}
 
 	public List<Imobiliaria> obterLista() {
@@ -40,4 +41,9 @@ public class ImobiliariaService {
 		
 		return imobiliariaRepository.findById(id);
 	}
+	
+	 public int ObterQtde() {
+	    	
+	    	return (int) imobiliariaRepository.count();
+	    }
 }

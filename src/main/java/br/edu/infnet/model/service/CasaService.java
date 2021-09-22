@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import br.edu.infnet.model.domain.Casa;
@@ -22,7 +23,7 @@ public class CasaService {
 	}
 	public List<Casa> obterLista(Usuario usuario){
 		
-		return (List<Casa>) casaRepository.obterLista(usuario.getId());
+		return (List<Casa>) casaRepository.obterLista(usuario.getId(), Sort.by(Sort.Direction.ASC,"endereco"));
 	}
 	
 	public void incluir(Casa casa) {
@@ -39,4 +40,9 @@ public class CasaService {
 		
 		return casaRepository.findById(id);
 	}
+	
+	 public int ObterQtde() {
+	    	
+	    	return (int) casaRepository.count();
+	    }
 }

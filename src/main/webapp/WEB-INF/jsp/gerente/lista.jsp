@@ -41,11 +41,6 @@ footer {
 	padding: 15px;
 }
 
-.bg-1 {
-	background-image: url("img/background.jpg");
-	color: #ffffff;
-}
-
 .bg-2 {
 	background-color: #474e5d;
 	color: #ffffff;
@@ -60,6 +55,12 @@ footer {
 	padding-top: 70px;
 	padding-bottom: 70px;
 }
+
+.bg-4 {
+	background-color: #1a8cff;
+	color: #ffffff;
+}
+
 </style>
 <head>
 <body>

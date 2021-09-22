@@ -37,11 +37,6 @@ body {
 	height: 100vh;
 }
 
-footer {
-	background-color: rgb(6, 25, 36);
-	color: rgb(179, 217, 240);
-	padding: 15px;
-}
 
 .bg-1 {
 	background-image: url("img/background.jpg");
@@ -56,6 +51,11 @@ footer {
 .bg-3 {
 	background-color: #ffffff;
 	color: #555555;
+}
+
+.bg-4 {
+	background-color: #1a8cff;
+	color: #ffffff;
 }
 
 .container-fluid {
@@ -100,7 +100,7 @@ footer {
 				<b>O imóvel possui garagem?</b>
 			</p>
 			<label class="radio-inline"> <input type="radio"
-				name="garagem" value="false" checked>Sim
+				name="garagem" value="false" >Sim
 			</label> <label class="radio-inline"> <input type="radio"
 				name="suite" value="true">Não
 			</label>
@@ -123,7 +123,7 @@ footer {
 				<b>O imóvel possui quintal?</b>
 			</p>
 			<label class="radio-inline"> <input type="radio"
-				name="quintal" value="true" checked>Sim
+				name="quintal" value="true">Sim
 			</label> <label class="radio-inline"> <input type="radio"
 				name="suite" value="false">Não
 			</label>

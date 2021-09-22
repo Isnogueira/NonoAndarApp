@@ -35,10 +35,6 @@ body {
 	height: 100vh;
 }
 
-footer {
-	background-color: rgb(6, 25, 36);
-	color: rgb(179, 217, 240);
-	padding: 15px;
 }
 
 .bg-1 {
@@ -55,6 +51,12 @@ footer {
 	background-color: #ffffff;
 	color: #555555;
 }
+
+.bg-4 {
+	background-color: #1a8cff;
+	color: #ffffff;
+}
+
 
 .container-fluid {
 	padding-top: 70px;
@@ -101,7 +103,7 @@ footer {
 			<input type="submit" name="submit"
 				class="btn btn-primary btn-lg btn-block" value="Enviar">
 		</div>
-	</form>>	
+	</form>	
 </div>
 <br>
 

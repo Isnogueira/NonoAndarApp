@@ -37,12 +37,6 @@ body {
 	height: 100vh;
 }
 
-footer {
-	background-color: rgb(6, 25, 36);
-	color: rgb(179, 217, 240);
-	padding: 15px;
-}
-
 .bg-1 {
 	background-image: url("img/background.jpg");
 	color: #ffffff;
@@ -56,6 +50,11 @@ footer {
 .bg-3 {
 	background-color: #ffffff;
 	color: #555555;
+}
+
+.bg-4 {
+	background-color: #1a8cff;
+	color: #ffffff;
 }
 
 .container-fluid {
@@ -109,7 +108,7 @@ footer {
 				<b>O imóvel possui suíte?</b>
 			</p>
 			<label class="radio-inline"> <input type="radio" name="suite"
-				value="true" checked>Sim
+				value="true">Sim
 			</label> <label class="radio-inline"> <input type="radio"
 				name="suite" value="false">Não
 			</label>
@@ -132,7 +131,7 @@ footer {
 				<b>O imóvel é Pet-friendly?</b>
 			</p>
 			<label class="radio-inline"> <input type="radio"
-				name="petFriendly" value="true" checked>Sim
+				name="petFriendly" value="true">Sim
 			</label> <label class="radio-inline"> <input type="radio"
 				name="petFriendly" value="false">Não
 			</label>

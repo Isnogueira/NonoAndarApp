@@ -35,11 +35,6 @@ body {
 	height: 100vh;
 }
 
-footer {
-	background-color: rgb(6, 25, 36);
-	color: rgb(179, 217, 240);
-	padding: 15px;
-}
 
 .bg-1 {
 	background-image: url("img/background.jpg");
@@ -55,6 +50,12 @@ footer {
 	background-color: #ffffff;
 	color: #555555;
 }
+
+.bg-4 {
+	background-color: #1a8cff;
+	color: #ffffff;
+}
+
 
 .container-fluid {
 	padding-top: 70px;

@@ -1,75 +1,128 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <title>Index</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <style>
+<title>Index</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+.navbar {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border: 0;
+	border-radius: 0;
+	margin-bottom: 0;
+	font-size: 12px;
+	letter-spacing: 5px;
+}
 
-         .navbar {
-          padding-top: 15px;
-          padding-bottom: 15px;
-          border: 0;
-          border-radius: 0;
-          margin-bottom: 0;
-          font-size: 12px;
-          letter-spacing: 5px;
-        }
+.navbar-nav li a:hover {
+	color: #1abc9c !important;
+}
 
-        .navbar-nav li a:hover {
-          color: #1abc9c !important;
-        }
+body {
+	background-color: #1a8cff;
+}
 
-        body {
-              margin: 0;
-              padding: 0;
-              background-color: #ffffff;
-              height: 100vh;
-        }
+.jumbotron {
+	background-color: #1a8cff;
+	color: #ffffff;
+}
 
-        footer {
-        background-color:rgb(6, 25, 36);
-        color: rgb(179, 217, 240);
-        padding: 15px;
-        }
+.bg-2 {
+	background-color: #b1cdcd;
+	color: #005ce6;
+}
 
-        .bg-1 {
-           background-image: url("img/background.jpg");
-            color: #ffffff;
-        }
-        .bg-2 {
-            background-color: #474e5d;
-            color: #ffffff;
-        }
-        .bg-3 {
-            background-color: #ffffff;
-            color: #555555;
-        }
+.bg-3 {
+	background-color: #ffffff;
+	color: #0047b3;
+}
 
-        .container-fluid {
-            padding-top: 70px;
-            padding-bottom: 70px;
-        }
-   </style>
+.bg-4 {
+	background-color: #1a8cff;
+	color: #ffffff;
+}
+
+.container-fluid {
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+</style>
 </head>
 <body>
-  <c:import url="/WEB-INF/jsp/menu.jsp"/>
-<div class="container-fluid bg-1 text-center">
-    <br>
-   <h3>Quem sou eu?</h3>
-   <img src="/img/eu.jpeg" class="img-circle" alt="eu" width="350" height="350">
-   <h3>Ingrid Nogueira - Aluna de ADS  Bloco Java </h3>
- </div>
- <div class="container-fluid bg-2 text-center">
-   <h3>Sobre o projeto</h3>
-   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
- </div>
+	<c:import url="/WEB-INF/jsp/menu.jsp" />
+	<c:if test="${empty user}">
+		<div class="jumbotron text-center">
+			<br>
+			<h1>Nono Andar APP</h1>
+			<p>AT da disciplina de Java EE do Bloco de Java do Instituto
+				Infnet</p>
+			<p>Desenvolvido por Ingrid Nogueira</p>
+		</div>
+	</c:if>
+	<c:if test="${not empty user}">
+		<div class="jumbotron text-center">
+			<br>
+			<h2>Seja bem vindo(a) ${user.nome}</h2>
+		</div>
+	</c:if>
+	<div class="container-fluid bg-2">
+		<div class="container text-center">
+			<h3>Resumo do sistema</h3>
+		</div>
+		<br>
+		<div class="container">
+			<ul class="list-group">
+				<c:forEach var="mapaUsuario" items="${mapaUsuarios}">
+					<li class="list-group-item">${mapaUsuario.key}<span
+						class="badge">${mapaUsuario.value}</span></li>
+				</c:forEach>
+			</ul>
+			<ul class="list-group">
+				<c:forEach var="mapaGerente" items="${mapaGerentes}">
+					<li class="list-group-item">${mapaGerente.key}<span
+						class="badge">${mapaGerente.value}</span></li>
+				</c:forEach>
+			</ul>
+			<ul class="list-group">
+				<c:forEach var="mapaApto" items="${mapaAptos}">
+					<li class="list-group-item">${mapaApto.key}<span class="badge">${mapaApto.value}</span></li>
+				</c:forEach>
+			</ul>
+			<ul class="list-group">
+				<c:forEach var="mapaCasa" items="${mapaCasas}">
+					<li class="list-group-item">${mapaCasa.key}<span class="badge">${mapaCasa.value}</span></li>
+				</c:forEach>
+			</ul>
+			<ul class="list-group">
+				<c:forEach var="mapaEscritorio" items="${mapaEscritorios}">
+					<li class="list-group-item">${mapaEscritorio.key}<span
+						class="badge">${mapaEscritorio.value}</span></li>
+				</c:forEach>
+			</ul>
+			<ul class="list-group">
+				<c:forEach var="mapaImobiliaria" items="${mapaImobiliarias}">
+					<li class="list-group-item">${mapaImobiliaria.key}<span
+						class="badge">${mapaImobiliaria.value}</span></li>
+				</c:forEach>
+			</ul>
+			<ul class="list-group">
+				<c:forEach var="mapaImovel" items="${mapaImoveis}">
+					<li class="list-group-item">${mapaImovel.key}<span
+						class="badge">${mapaImovel.value}</span></li>
+				</c:forEach>
+			</ul>
+		</div>
+	</div>
 	<c:import url="/WEB-INF/jsp/footer.jsp" />
 </body>
 </html>

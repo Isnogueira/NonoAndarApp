@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import br.edu.infnet.model.domain.Apartamento;
@@ -24,7 +25,7 @@ public class ApartamentoService {
 	
 	public List<Apartamento> obterLista(Usuario usuario){
 		
-		return (List<Apartamento>) apartamentoRepository.obterLista(usuario.getId());
+		return (List<Apartamento>) apartamentoRepository.obterLista(usuario.getId(), Sort.by(Sort.Direction.ASC,"endereco"));
 	}
 	
 
@@ -46,6 +47,10 @@ public class ApartamentoService {
 		
 	}
 	
+	 public int ObterQtde() {
+	    	
+	    	return (int) apartamentoRepository.count();
+	    }
 }
 
 

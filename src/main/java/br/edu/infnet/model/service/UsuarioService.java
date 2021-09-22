@@ -1,12 +1,14 @@
 package br.edu.infnet.model.service;
 
-import br.edu.infnet.model.domain.Usuario;
-import br.edu.infnet.model.repository.UsuarioRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
+import org.springframework.stereotype.Service;
+
+import br.edu.infnet.model.domain.Usuario;
+import br.edu.infnet.model.repository.UsuarioRepository;
 
 @Service
 public class UsuarioService {
@@ -15,7 +17,7 @@ public class UsuarioService {
     private UsuarioRepository usuarioRepository;
 
     public List<Usuario> obterLista(){
-        return (List<Usuario>) usuarioRepository.findAll();
+        return (List<Usuario>) usuarioRepository.findAll(Sort.by(Sort.Direction.ASC,"nome"));
     }
 
     public Optional<Usuario> obterPorId(Integer id){
@@ -36,5 +38,10 @@ public class UsuarioService {
     public void excluir(Integer id){
 
         usuarioRepository.deleteById(id);
+    }
+    
+    public int ObterQtde() {
+    	
+    	return (int) usuarioRepository.count();
     }
 }

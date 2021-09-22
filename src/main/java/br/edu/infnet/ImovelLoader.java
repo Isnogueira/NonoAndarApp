@@ -38,6 +38,7 @@ public class ImovelLoader implements ApplicationRunner {
 		apto.setEndereco("Rua Padrão n°1");
 		apto.setValorAluguel(1800);
 		apto.setValorVenda(340000);
+		apto.setValorCondominio(700);
 		apto.setSuite(false);
 		apto.setPetFriendly(false);
 		apto.setVagas(1);
