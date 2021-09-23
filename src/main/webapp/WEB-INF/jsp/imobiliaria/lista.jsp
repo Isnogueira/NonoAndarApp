@@ -50,7 +50,6 @@ body {
 	color: #ffffff;
 }
 
-
 .container-fluid {
 	padding-top: 70px;
 	padding-bottom: 70px;
@@ -82,7 +81,8 @@ body {
 						<th>Nome</th>
 						<th>Telefone</th>
 						<th>Gerente</th>
-						<th>Imoveis</th>
+						<th>Qtde imóveis</th>
+						<th>Imóveis</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -93,7 +93,13 @@ body {
 							<td>${imob.telefone}</td>
 							<td>${imob.gerente.nome}</td>
 							<td>${imob.imoveis.size()}</td>
-							<td><a href="/imobiliaria/${imob.id}/excluir" >Excluir</a></td>
+							<td><c:forEach var="imovelImob" items="${imob.imoveis}">
+									<div class=form-group>
+									 	${imovelImob.endereco}
+									</div>
+								</c:forEach>	
+							</td>
+							<td><a href="/imobiliaria/${imob.id}/excluir">Excluir</a></td>
 						</tr>
 					</c:forEach>
 				</tbody>
