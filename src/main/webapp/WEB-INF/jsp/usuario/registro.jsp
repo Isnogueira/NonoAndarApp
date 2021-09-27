@@ -86,17 +86,17 @@ body {
 	<form action="/usuario" method="post">	
 		<div class="form-group">
 			<label for="nome" class="text-info">Nome</label><br> <input
-				type="text" name="nome" id="nome" class="form-control">
+				type="text" name="nome" value="Gabriela Nunes" id="nome" class="form-control">
 		</div>
 		<c:import url="/WEB-INF/jsp/endereco.jsp" />
 		<hr>
 		<div class="form-group">
 			<label for="email" class="text-info">E-mail</label><br> <input
-				type="email" name="email" id="email" class="form-control">
+				type="email" name="email" value="gaby@gaby.com" id="email" class="form-control">
 		</div>
 		<div class="form-group">
 			<label for="senha" class="text-info">Senha</label><br> <input
-				type="password" name="senha" id="senha" class="form-control">
+				type="password" name="senha" value= id="senha" class="form-control">
 		</div>
 		<br>
 		<div class="form-group">
