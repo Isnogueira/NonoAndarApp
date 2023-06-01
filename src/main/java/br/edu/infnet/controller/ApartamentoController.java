@@ -1,8 +1,8 @@
 package br.edu.infnet.controller;
 
-import br.edu.infnet.model.domain.Apartamento;
-import br.edu.infnet.model.domain.Usuario;
-import br.edu.infnet.model.service.ApartamentoService;
+import br.edu.infnet.domain.Apartamento;
+import br.edu.infnet.domain.Usuario;
+import br.edu.infnet.service.ApartamentoService;
 
 import java.util.List;
 import java.util.Optional;

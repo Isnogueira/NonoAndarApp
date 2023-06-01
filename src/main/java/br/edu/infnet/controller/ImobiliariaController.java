@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttribute;
 
-import br.edu.infnet.model.domain.Imobiliaria;
-import br.edu.infnet.model.domain.Imovel;
-import br.edu.infnet.model.domain.Usuario;
-import br.edu.infnet.model.service.GerenteService;
-import br.edu.infnet.model.service.ImobiliariaService;
-import br.edu.infnet.model.service.ImovelService;
+import br.edu.infnet.domain.Imobiliaria;
+import br.edu.infnet.domain.Imovel;
+import br.edu.infnet.domain.Usuario;
+import br.edu.infnet.service.GerenteService;
+import br.edu.infnet.service.ImobiliariaService;
+import br.edu.infnet.service.ImovelService;
 
 @Controller
 public class ImobiliariaController {
@@ -37,7 +37,7 @@ public class ImobiliariaController {
 
 		model.addAttribute("gerentes", gerenteService.obterLista(usuario));
 
-		model.addAttribute("imoveis", imovelService.obterLista(usuario));
+		model.addAttribute("imoveis", imovelService.obterListaPorUsuario(usuario));
 
 		return "/imobiliaria/cadastro";
 	}

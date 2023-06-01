@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import br.edu.infnet.model.domain.Endereco;
-import br.edu.infnet.model.domain.Usuario;
-import br.edu.infnet.model.service.UsuarioService;
+import br.edu.infnet.domain.Endereco;
+import br.edu.infnet.domain.Usuario;
+import br.edu.infnet.service.UsuarioService;
 
 @Controller
 public class UsuarioController {

@@ -7,7 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import br.edu.infnet.model.service.EnderecoService;
+import br.edu.infnet.service.EnderecoService;
 
 @Controller
 public class EnderecoController {

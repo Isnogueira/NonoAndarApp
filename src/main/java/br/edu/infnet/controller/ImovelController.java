@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.SessionAttribute;
 
-import br.edu.infnet.model.domain.Imovel;
-import br.edu.infnet.model.domain.Usuario;
-import br.edu.infnet.model.service.ImovelService;
+import br.edu.infnet.domain.Imovel;
+import br.edu.infnet.domain.Usuario;
+import br.edu.infnet.service.ImovelService;
 
 @Controller
 public class ImovelController {
@@ -21,7 +21,7 @@ public class ImovelController {
 	@GetMapping(value = "/imovel/lista")
 	public String telaLista(Model model, @SessionAttribute("user") Usuario usuario) {
 		
-		model.addAttribute("imoveis", imovelService.obterLista(usuario));
+		model.addAttribute("imoveis", imovelService.obterListaPorUsuario(usuario));
 		
 		return "/imovel/lista";
 	}	
@@ -36,5 +36,13 @@ public class ImovelController {
 		model.addAttribute("msg", "Imovel " + imovel.getEndereco() + " removido com sucesso!!!");
 		
 		return telaLista(model, usuario);
+	}
+
+	@GetMapping(value = "/imovel/busca")
+	public String busca(Model model, String localizacao) {
+
+		model.addAttribute("imoveis", imovelService.buscarPelaLocalizacao(localizacao));
+
+		return "/index";
 	}
 }

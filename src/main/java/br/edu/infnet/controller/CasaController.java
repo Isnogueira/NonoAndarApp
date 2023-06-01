@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.SessionAttribute;
 
-import br.edu.infnet.model.domain.Casa;
-import br.edu.infnet.model.domain.Usuario;
-import br.edu.infnet.model.service.CasaService;
+import br.edu.infnet.domain.Casa;
+import br.edu.infnet.domain.Usuario;
+import br.edu.infnet.service.CasaService;
 
 @Controller
 public class CasaController {

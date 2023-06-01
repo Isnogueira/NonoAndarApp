@@ -1,0 +1,11 @@
+0;Julio Figueira LTDA;Rua Machado de Assis 89 - Rio de Janeiro;21932456786;Rosalia Barbosa;rosaliab@gggg.com;2198745768
+C;Rua Ernani Alves 45;Sao Joao da Barra;Rio de Janeiro;Venda;2;2;1390000;2900;100;100;true;true;false;1
+A;Rua Paulo Gustavo 34/301";Niteroi;Rio de Janeiro;Aluguel;2;2;1400000;3000;100;100;true;900;false;1;true
+E;Rua Sete de Setembro 75/1502 - Centro;Rio de Janeiro;Rio de Janeiro;Aluguel;2;2;1410000;3100;100;100;true;700;true;false
+A;Rua Almirante Goncalves 20/1001 - Copacabana;Rio de Janeiro;Rio de Janeiro;Venda;2;2;1420000;3200;100;100;true;800;false;1;true
+0;Andrada LTDA;Rua Leandra de Albuquerque 102 - Rio de Janeiro;21939852786;Leoncio Martinez;leonciom@hhhh.com;2199767768
+E;Rua Praia de Botafogo 1200/1301 - Botafogo;Rio de Janeiro;Rio de Janeiro;Aluguel;2;2;1430000;3300;100;100;true;650;true;true
+C;Rua Assuncao de Oliveira 50;Saquarema;Rio de Janeiro;Aluguel;2;2;1440000;3400;100;100;true;true;false;1
+C;Rua Alvaro Ramos 35 - Botafogo;Rio de Janeiro;Rio de Janeiro;Venda;2;2;1450000;3500;100;100;true;true;false;1
+A;Rua Ministro Viveiros de Castro 40/505 - Centro;Campos dos Goitacazes;Rio de Janeiro;Aluguel;2;2;1460000;3600;100;100;true;700;false;1;true
+E;Rua Sao Jose 98/1301 - Centro;Rio de Janeiro;Rio de Janeiro;Aluguel;2;2;1470000;3700;100;100;true;450;true;false
