@@ -18,7 +18,7 @@ public class UsuarioService {
     private final UsuarioRepository usuarioRepository;
 
     public List<Usuario> obterLista(){
-        return usuarioRepository.findAll(Sort.by(Sort.Direction.ASC,"nome"));
+        return (List<Usuario>) usuarioRepository.findAll();
     }
 
     public Optional<Usuario> obterPorId(Integer id){

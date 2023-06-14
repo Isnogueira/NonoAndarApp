@@ -1,8 +1,6 @@
 package br.edu.infnet.controller;
 
-import java.util.HashMap;
-import java.util.Map;
-
+import br.edu.infnet.service.*;
 import jakarta.servlet.http.*;
 
 import lombok.RequiredArgsConstructor;
@@ -15,25 +13,15 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 
 import br.edu.infnet.domain.Usuario;
-import br.edu.infnet.service.ApartamentoService;
-import br.edu.infnet.service.CasaService;
-import br.edu.infnet.service.EscritorioService;
-import br.edu.infnet.service.GerenteService;
-import br.edu.infnet.service.ImobiliariaService;
-import br.edu.infnet.service.ImovelService;
-import br.edu.infnet.service.UsuarioService;
+import br.edu.infnet.service.ProcedimentoService;
 
 @SessionAttributes("user")
 @Controller
 @RequiredArgsConstructor
 public class AcessoController {
 	private final UsuarioService usuarioService;
-	private final GerenteService gerenteService;
-	private final ApartamentoService apartamentoService;
-	private final CasaService casaService;
-	private final EscritorioService escritorioService;
-	private final ImobiliariaService imobiliariaService;
-	private final ImovelService imovelService;
+	private final ProcedimentoService imobiliariaService;
+	private final PetService petService;
 
 	
 	@GetMapping(value = "/")
@@ -66,7 +54,7 @@ public class AcessoController {
 //		mapaImobiliarias.put("Imobiliárias", imobiliariaService.ObterQtde());
 //		model.addAttribute("mapaImobiliarias", mapaImobiliarias);
 //
-		model.addAttribute("imoveis", imovelService.obterLista());
+	//	model.addAttribute("pets", petService.obterLista());
 
 //
 

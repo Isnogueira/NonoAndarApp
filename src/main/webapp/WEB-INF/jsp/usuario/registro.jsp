@@ -64,7 +64,7 @@ body {
 }
 </style>
 </head>
-</body>
+<body>
 <c:import url="/WEB-INF/jsp/menu.jsp" />
 <div class="container">
 	<c:if test="${not empty mensagem}">
@@ -75,20 +75,11 @@ body {
 </div>		
 <div class="container">	
 	<h3 class="text-center text-info">Registrar</h3>
-<%--	<form action="/usuario/cep" class="form-inline" method="post">--%>
-<%--		<div class="form-group">--%>
-<%--			<label for="cep" class="text-info">CEP</label><br> <input--%>
-<%--			type="text" name="cep" id="cep" class="form-control">--%>
-<%--			<button type="submit" name="submit"--%>
-<%--				class="btn btn-primary">Buscar</button>--%>
-<%--		</div>--%>
-<%--	</form>--%>
 	<form action="/usuario" method="post">
 		<div class="form-group">
 			<label for="nome" class="text-info">Nome</label><br> <input
 				type="text" name="nome" value="" id="nome" class="form-control">
 		</div>
-		<c:import url="/WEB-INF/jsp/endereco.jsp" />
 		<hr>
 		<div class="form-group">
 			<label for="email" class="text-info">E-mail</label><br> <input

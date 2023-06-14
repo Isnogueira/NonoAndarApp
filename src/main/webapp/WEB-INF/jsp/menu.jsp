@@ -10,18 +10,23 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">NonoAndarApp</a>
+          <a class="navbar-brand" href="/">PetCare</a>
         </div>
          <div class="collapse navbar-collapse" id="myNavbar">
            <ul class="nav navbar-nav navbar">
               <c:if test="${not empty user}">
-                <li><a href="/usuario/lista">Usuários</a></li>
-                <li><a href="/gerente/lista">Gerentes</a></li>
-                <li><a href="/apartamento/lista">Apartamentos</a></li>
-                <li><a href="/casa/lista">Casas</a></li>
-                <li><a href="/escritorio/lista">Escritórios</a></li>
-                <li><a href="/imobiliaria/lista">Imobiliárias</a></li>
-                <li><a href="/imovel/lista">Imóveis</a></li>
+<%--                <li><a href="/usuario/lista">Usuários</a></li>--%>
+<%--                <li><a href="/gerente/lista">Gerentes</a></li>--%>
+<%--                <li><a href="/apartamento/lista">Apartamentos</a></li>--%>
+<%--                <li><a href="/casa/lista">Casas</a></li>--%>
+<%--                <li><a href="/escritorio/lista">Escritórios</a></li>--%>
+<%--                <li><a href="/procedimento/lista">Imobiliárias</a></li>--%>
+                    <li><a href="/pet/lista">Pets</a></li>
+                  <li><a href="/procedimento/lista">Agendar procedimentos</a></li>
+                  <li><a href="/exames/lista">Agenda de exames</a></li>
+                  <li><a href="/banhos/lista">Agenda de banho e tosa</a></li>
+<%--                  <li><a href="">Laudos</a></li>--%>
+
               </c:if>
           </ul>
           <ul class="nav navbar-nav navbar-right">

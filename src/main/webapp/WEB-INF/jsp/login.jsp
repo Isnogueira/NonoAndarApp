@@ -32,14 +32,9 @@
                      height: 100vh;
                }
 
-               footer {
-               background-color:rgb(6, 25, 36);
-               color: rgb(179, 217, 240);
-               padding: 15px;
-               }
 
                .bg-1 {
-                  background-image: url("img/background.jpg");
+                  /*background-image: url("img/background.jpg");*/
                    color: #ffffff;
                }
                .bg-2 {
@@ -78,7 +73,7 @@
                      <input type="password" name="senha" id="senha" class="form-control">
                  </div>
                  <div class="form-group">
-                     <input type="submit" name="submit" class="btn btn-info btn-md" value="Entrar">
+                     <input type="submit" name="submit" class="btn btn-primary btn-lg btn-block" value="Entrar">
                  </div>
          </div>
   <hr>
